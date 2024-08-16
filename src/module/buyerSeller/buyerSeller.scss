@@ -1,0 +1,413 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
+    padding: 0;
+}
+
+.buysell-grid {
+    min-height: calc(100vh - 102px);
+    display: grid;
+    grid-template-columns: 412px 1fr;
+    font-family: "Mulish", sans-serif;
+
+    @media (max-width: 1024px) {
+        display: block;
+    }
+
+    @media (max-width: 576px) {
+        min-height: calc(100vh - 84px);
+    }
+
+    .home-box {
+        border-right: 1px solid #ededed;
+
+        @media (max-width: 1024px) {
+            display: none;
+        }
+
+        .search-input-main {
+            display: none;
+        }
+
+        .box1-list {
+            border-bottom: 1px solid #ededed;
+            display: flex;
+            justify-content: space-between;
+
+            .box1-list-link {
+                display: flex;
+
+                a {
+                    display: block;
+                    padding: 14px;
+                    text-decoration-line: none;
+                    border-bottom: 2px solid transparent;
+                    font-family: "Mulish", sans-serif;
+                    font-size: 16px;
+                    font-weight: 600;
+                    line-height: 20.08px;
+                    color: #54577a;
+
+                    &:hover {
+                        border-bottom: 2px solid #505abb;
+                        color: #505abb;
+                    }
+                }
+            }
+
+            .box1-list-menu {
+                padding-right: 20px;
+                display: flex;
+                align-items: center;
+                gap: 12px;
+
+                button {
+                    padding: 5px 9px;
+                    background-color: transparent;
+                    border: 1px solid #505abb;
+                    border-radius: 4px;
+                    font-family: "Mulish", sans-serif;
+                    font-size: 14px;
+                    font-weight: 600;
+                    line-height: 17.57px;
+                    color: #505abb;
+                    cursor: pointer;
+                }
+
+                .box1-list-menu-line {
+                    padding: 15px 0.5px;
+                    background-color: #ededed;
+                }
+
+                img {
+                    cursor: pointer;
+                }
+            }
+        }
+
+        .box1-list-main {
+            padding: 15px 20px;
+            border-bottom: 1px solid #ededed;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            h3 {
+                font-size: 16px;
+                font-weight: 600;
+                line-height: 20.08px;
+                color: #54577a;
+            }
+
+            .box1-list-main-bin {
+                display: flex;
+
+                button {
+                    padding: 6px 14px;
+                    border: none;
+                    font-family: "Mulish", sans-serif;
+                    border-radius: 6px;
+                    font-size: 16px;
+                    font-weight: 600;
+                    line-height: 20.08px;
+                    color: #fff;
+                    background-color: #4184f3;
+                    cursor: pointer;
+
+                    &:last-of-type {
+                        margin: 0 8px;
+                        background-color: #f65722;
+                    }
+                }
+
+                .box1-list-s-font {
+                    background-color: #f65722;
+                }
+
+                img {
+                    padding: 5px;
+                    border: 1px solid #ededed;
+                    border-radius: 6px;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+
+    .buysell-box {
+        background-color: #f5f6fa;
+        padding: 20px;
+        overflow: hidden;
+
+        @media (max-width: 576px) {
+            padding: 0;
+        }
+
+        .status-box-title {
+            display: none;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 20px;
+            background-color: #505abb;
+
+            @media (max-width: 576px) {
+                display: flex;
+            }
+
+            h2 {
+                display: block;
+                margin: 0;
+                font-family: "Mulish", sans-serif;
+                font-size: 16px;
+                font-weight: 700;
+                line-height: 20.08px;
+                color: #fff;
+            }
+
+            svg {
+                fill: #45486a;
+                stroke: #45486a;
+                cursor: pointer;
+
+                @media (max-width: 576px) {
+                    width: 20px;
+                    height: 20px;
+                    fill: #fff;
+                    stroke: #fff;
+                }
+            }
+        }
+
+        .buysell-box-main {
+            min-height: calc(100vh - 102px - 80px);
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 6px;
+            display: flex;
+            flex-direction: column;
+
+            @media (max-width: 576px) {
+                padding: 0;
+                min-height: calc(100vh - 84px - 80px);
+            }
+
+            .buysell-box-main-head {
+                .buysell-box-head {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    margin-bottom: 20px;
+
+                    @media (max-width: 576px) {
+                        margin: 0;
+                        padding: 12px 20px;
+                    }
+
+                    h2 {
+                        font-family: "Poppins", sans-serif;
+                        font-size: 26px;
+                        font-weight: 600;
+                        line-height: 39px;
+                        color: #54577a;
+
+                        @media (max-width: 576px) {
+                            font-family: "Mulish", sans-serif;
+                            font-size: 16px;
+                            font-weight: 700;
+                            line-height: 20.08px;
+                        }
+                    }
+
+                    .buysell-button {
+                        button {
+                            padding: 10px 14px;
+                            border: none;
+                            font-family: "Mulish", sans-serif;
+                            border-radius: 6px;
+                            font-size: 16px;
+                            font-weight: 600;
+                            line-height: 20.08px;
+                            color: #fff;
+                            background-color: #4184f3;
+                            cursor: pointer;
+
+                            @media (max-width: 576px) {
+                                padding: 6px 11px;
+                                font-size: 14px;
+                                font-weight: 700;
+                                line-height: 17.57px;
+                            }
+
+                            &:last-child {
+                                margin-left: 8px;
+                                background-color: #f65722;
+                            }
+                        }
+                    }
+                }
+
+                .buysell-grade {
+                    margin-bottom: 22px;
+                    padding: 20px 18px;
+                    background-color: #f5f6fa;
+                    border: 0.5px solid #505abb26;
+
+                    @media (max-width: 576px) {
+                        padding: 15px 20px;
+                        margin: 0;
+                    }
+
+                    .buysell-grade-text {
+                        display: flex;
+                        flex-wrap: wrap;
+                        gap: 20px;
+                        padding-bottom: 20px;
+
+                        span {
+                            font-size: 16px;
+                            font-weight: 600;
+                            line-height: 20.08px;
+                            color: #54577a;
+
+                            @media (max-width: 576px) {
+                                font-size: 14px;
+                                line-height: 17.57px;
+                            }
+                        }
+                    }
+
+                    .buysell-grade-text-main {
+                        display: flex;
+                        gap: 12px;
+
+                        h4 {
+                            font-size: 16px;
+                            font-weight: 600;
+                            line-height: 20.08px;
+                            color: #8184aa;
+
+                            @media (max-width: 576px) {
+                                font-size: 14px;
+                                line-height: 17.57px;
+                            }
+                        }
+
+                        a {
+                            font-size: 16px;
+                            font-weight: 600;
+                            line-height: 20.08px;
+                            color: #505abb;
+
+                            @media (max-width: 576px) {
+                                font-size: 14px;
+                                line-height: 17.57px;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .buysell-table {
+                flex-grow: 1;
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 14px;
+                overflow-x: auto;
+
+                @media (max-width: 1024px) {
+                    flex-grow: 0;
+                }
+
+                @media (max-width: 576px) {
+                    gap: 0;
+                    padding: 0 9px;
+                }
+
+                table {
+                    text-align: left;
+                    border-collapse: collapse;
+                    font-family: "Mulish", sans-serif;
+
+                    @media (max-width: 576px) {
+                        border: hidden;
+                    }
+
+                    thead {
+                        tr {
+                            th {
+                                white-space: nowrap;
+                                padding: 15px 18px 15px 15px;
+                                font-size: 14px;
+                                font-weight: 700;
+                                line-height: 20px;
+                                color: #54577a;
+                                border: 1px solid #e9ecef;
+
+                                @media (max-width: 576px) {
+                                    border: none;
+                                    border-bottom: 1px solid #e9ecef;
+                                    padding: 15px 6px 12px 6px;
+                                    font-size: 12px;
+                                    line-height: 16px;
+
+                                    &:first-child {
+                                        display: none;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    tbody {
+                        tr {
+                            td {
+                                white-space: nowrap;
+                                padding: 22px 15px;
+                                border: 1px solid #e9ecef;
+                                font-size: 14px;
+                                font-weight: 600;
+                                line-height: 17.57px;
+                                color: #4184f3;
+
+                                @media (max-width: 576px) {
+                                    border: none;
+                                    padding: 12px 6px;
+                                    font-size: 13px;
+                                    line-height: 16.32px;
+
+                                    &:first-child {
+                                        display: none;
+                                    }
+                                }
+                            }
+                        }
+
+                        .last-empty-row {
+                            height: 100%;
+
+                            @media (max-width: 1024px) {
+                                display: none;
+                            }
+                        }
+                    }
+                }
+
+                .sell-table {
+                    td {
+                        color: #f65722;
+                    }
+                }
+            }
+        }
+    }
+}

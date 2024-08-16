@@ -1,0 +1,189 @@
+header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    padding: 25px 20px 24px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ededed;
+
+    @media (max-width: 576px) {
+        padding: 22px 20px 20px 20px;
+    }
+
+    .search-input-main {
+        height: 100%;
+        min-width: 351px;
+        position: relative;
+
+        @media (max-width: 1024px) {
+            display: none;
+        }
+
+        input {
+            box-sizing: border-box;
+            border: 1px solid #54577a2e;
+            border-radius: 8px;
+            padding: 16px 17px;
+            width: 100%;
+            font-family: "Mulish", sans-serif;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 17.57px;
+            letter-spacing: -0.01em;
+            text-align: left;
+            color: #54577a;
+
+            &::placeholder {
+                font-family: "Mulish", sans-serif;
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 17.57px;
+                letter-spacing: -0.01em;
+                text-align: left;
+                color: #54577a;
+            }
+
+            &:focus {
+                outline: none;
+            }
+        }
+
+        .searchicon-main {
+            position: absolute;
+            top: 50%;
+            right: 16px;
+            transform: translateY(-50%);
+            width: 20px;
+            height: 20px;
+
+            img {
+                width: 20px;
+                height: 20px;
+                display: block;
+                cursor: pointer;
+            }
+        }
+    }
+
+    .header-menubar {
+        display: none;
+        align-items: center;
+        gap: 16px;
+
+        .header-menu {
+            width: 30px;
+            padding: 5px;
+            border: 1px solid #505abb;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+        a {
+            max-height: 30px;
+
+            img {
+                width: 126px;
+            }
+        }
+
+        @media (max-width: 1024px) {
+            display: flex;
+        }
+    }
+
+    .user-details-header {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+
+        @media (max-width: 576px) {
+            gap: 14px;
+        }
+
+        .notification-div-main {
+            padding: 14px 15px;
+            border-radius: 50%;
+            border: 1px solid #e6e6eb;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            @media (max-width: 576px) {
+                padding: 9px 10px;
+            }
+
+            .notification-icon-main {
+                position: relative;
+                width: 20px;
+                height: 22px;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+
+                .notification-text-main {
+                    position: absolute;
+                    top: -1px;
+                    right: -1px;
+                    border-radius: 50%;
+                    background-color: #ee3839;
+                    width: 8px;
+                    height: 8px;
+                }
+            }
+        }
+
+        .username-logo-main {
+            display: flex;
+            justify-content: start;
+            align-items: center;
+            gap: 10px;
+
+            .username-logo {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 52px;
+                height: 52px;
+                background-color: #505abb;
+                border-radius: 50%;
+
+                @media (max-width: 576px) {
+                    width: 42px;
+                    height: 42px;
+                }
+
+                span {
+                    font-family: "Mulish", sans-serif;
+                    font-size: 18px;
+                    font-weight: 700;
+                    line-height: 22.59px;
+                    text-align: left;
+                    color: #fff;
+
+                    @media (max-width: 576px) {
+                        font-size: 15px;
+                        font-weight: 700;
+                        line-height: 18.83px;
+                    }
+                }
+            }
+
+            p {
+                font-family: "Mulish", sans-serif;
+                font-size: 16px;
+                font-weight: 600;
+                line-height: 20.08px;
+                text-align: left;
+                color: #54577a;
+
+                @media (max-width: 576px) {
+                    display: none;
+                }
+            }
+        }
+    }
+}
