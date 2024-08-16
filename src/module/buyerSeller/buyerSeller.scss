@@ -83,6 +83,12 @@ p {
                     line-height: 17.57px;
                     color: #505abb;
                     cursor: pointer;
+
+                    &:hover {
+                        background-color: #505abb;
+                        color: #fff;
+                        transition: 0.3s ease-in-out;
+                    }
                 }
 
                 .box1-list-menu-line {
@@ -108,6 +114,14 @@ p {
                 font-weight: 600;
                 line-height: 20.08px;
                 color: #54577a;
+
+                span {
+                    margin-left: 4px;
+                    font-size: 14px;
+                    font-weight: 500;
+                    line-height: 17.57px;
+                    color: #54577AB2;
+                }
             }
 
             .box1-list-main-bin {

@@ -24,16 +24,20 @@ function Header({ toggleSidebar }) {
           </NavLink>
         </div>
         <div className="user-details-header">
-          <div className="notification-div-main">
-            <div className="notification-icon-main">
-              <img src={Notification} alt="Notification" />
-              <div className="notification-text-main"></div>
+          <NavLink to={"/notification"}>
+            <div className="notification-div-main">
+              <div className="notification-icon-main">
+                <img src={Notification} alt="Notification" />
+                <div className="notification-text-main"></div>
+              </div>
             </div>
-          </div>
+          </NavLink>
           <div className="username-logo-main">
-            <div className="username-logo">
-              <span>RF</span>
-            </div>
+            <NavLink to={"/profile"}>
+              <div className="username-logo">
+                <span>RF</span>
+              </div>
+            </NavLink>
             <p>Robert Fox</p>
           </div>
         </div>

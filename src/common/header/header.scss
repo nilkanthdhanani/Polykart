@@ -142,32 +142,36 @@ header {
             align-items: center;
             gap: 10px;
 
-            .username-logo {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                width: 52px;
-                height: 52px;
-                background-color: #505abb;
-                border-radius: 50%;
-
-                @media (max-width: 576px) {
-                    width: 42px;
-                    height: 42px;
-                }
-
-                span {
-                    font-family: "Mulish", sans-serif;
-                    font-size: 18px;
-                    font-weight: 700;
-                    line-height: 22.59px;
-                    text-align: left;
-                    color: #fff;
+            a {
+                text-decoration: none;
+                
+                .username-logo {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 52px;
+                    height: 52px;
+                    background-color: #505abb;
+                    border-radius: 50%;
 
                     @media (max-width: 576px) {
-                        font-size: 15px;
+                        width: 42px;
+                        height: 42px;
+                    }
+
+                    span {
+                        font-family: "Mulish", sans-serif;
+                        font-size: 18px;
                         font-weight: 700;
-                        line-height: 18.83px;
+                        line-height: 22.59px;
+                        text-align: left;
+                        color: #fff;
+
+                        @media (max-width: 576px) {
+                            font-size: 15px;
+                            font-weight: 700;
+                            line-height: 18.83px;
+                        }
                     }
                 }
             }

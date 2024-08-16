@@ -4,6 +4,7 @@ import Add from "../../assets/icons/add";
 import Transaction from "../../assets/icons/transaction";
 import Wallet from "../../assets/icons/wallet";
 import AddWallet from "../../components/modals/addWallet";
+import { NavLink } from 'react-router-dom';
 
 export default function WalletBallance() {
     const [isModalOpen, setIsModalOpen] = useState(false);
@@ -34,9 +35,11 @@ export default function WalletBallance() {
                         <button onClick={() => openModal("add")}>
                             <Add /> <span>Add Balance</span>
                         </button>
-                        <button>
-                            <Transaction /> <span>Transaction</span>
-                        </button>
+                        <NavLink to={"/transaction"}>
+                            <button>
+                                <Transaction /> <span>Transaction</span>
+                            </button>
+                        </NavLink>
                     </div>
                 </div>
                 <div className="wallet-section">

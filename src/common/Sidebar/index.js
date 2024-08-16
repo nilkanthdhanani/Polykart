@@ -43,7 +43,7 @@ function Sidebar({ isOpen, toggleSidebar }) {
               <div className="sideborder-navlinks"></div>
             </div>
             <div className="sidebar-navigation-link">
-              <NavLink to={"/"} onClick={toggleSidebar}>
+              <NavLink to={"/orderstatus"} onClick={toggleSidebar}>
                 <div className="sidebar-navigationlinks-inner-alignment">
                   <Orderstatusicon />
                   <span>Order Status</span>
@@ -52,7 +52,7 @@ function Sidebar({ isOpen, toggleSidebar }) {
               <div className="sideborder-navlinks"></div>
             </div>
             <div className="sidebar-navigation-link">
-              <NavLink to={"/"} onClick={toggleSidebar}>
+              <NavLink to={"/profile"} onClick={toggleSidebar}>
                 <div className="sidebar-navigationlinks-inner-alignment">
                   <Profileicon />
                   <span>Profile</span>

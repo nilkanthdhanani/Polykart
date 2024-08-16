@@ -61,6 +61,10 @@ p {
             display: flex;
             gap: 12px;
 
+            a {
+                text-decoration-line: none;
+            }
+
             button {
                 padding: 9px 9px 9px 6px;
                 color: #fff;

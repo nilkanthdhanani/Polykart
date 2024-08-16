@@ -146,6 +146,13 @@ p {
                     line-height: 17.57px;
                     color: #505abb;
                     cursor: pointer;
+                    transition: 0.3s ease-in-out;
+
+                    &:hover {
+                        background-color: #505abb;
+                        color: #fff;
+                        transition: 0.3s ease-in-out;
+                    }
                 }
 
                 .box1-list-menu-line {
@@ -185,27 +192,31 @@ p {
             .box1-list-main-bin {
                 display: flex;
 
-                button {
-                    padding: 6px 14px;
-                    border: none;
-                    font-family: "Mulish", sans-serif;
-                    border-radius: 6px;
-                    font-size: 16px;
-                    font-weight: 600;
-                    line-height: 20.08px;
-                    color: #fff;
-                    background-color: #4184f3;
-                    cursor: pointer;
-
+                a {
                     &:last-of-type {
-                        margin: 0 8px;
-                        background-color: #f65722;
+                        button {
+                            margin: 0 8px;
+                            background-color: #f65722;
+                        }
                     }
 
-                    @media (max-width: 576px) {
-                        padding: 6px 11px;
-                        font-size: 14px;
-                        line-height: 17.57px;
+                    button {
+                        padding: 6px 14px;
+                        border: none;
+                        font-family: "Mulish", sans-serif;
+                        border-radius: 6px;
+                        font-size: 16px;
+                        font-weight: 600;
+                        line-height: 20.08px;
+                        color: #fff;
+                        background-color: #4184f3;
+                        cursor: pointer;
+
+                        @media (max-width: 576px) {
+                            padding: 6px 11px;
+                            font-size: 14px;
+                            line-height: 17.57px;
+                        }
                     }
                 }
 
@@ -251,6 +262,10 @@ p {
             .dashboard-button {
                 display: flex;
                 gap: 12px;
+
+                a {
+                    text-decoration-line: none;
+                }
 
                 button {
                     padding: 10px 12px;
