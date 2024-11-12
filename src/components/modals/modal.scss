@@ -114,7 +114,7 @@
                 }
 
                 input {
-                    width: calc(100% - 42px);
+                    width: 100%;
                     margin: 8px 0 25px 0;
                     padding: 20px;
                     border: 1px solid #cbcad7;
@@ -129,7 +129,7 @@
                     }
 
                     @media (max-width: 576px) {
-                        width: calc(100% - 34px);
+                        width: 100%;
                         margin: 8px 0 15px 0;
                         padding: 17px;
                         font-size: 14px;
@@ -167,7 +167,7 @@
                     position: relative;
 
                     input {
-                        width: calc(100% - 80px);
+                        width: 100%;
                         padding: 20px 20px 20px 60px;
                     }
 
@@ -206,7 +206,7 @@
 
                             @media (max-width: 576px) {
                                 padding: 17px 10px;
-                                width: calc(100% - 20px);
+                                width: 100%;
                             }
 
                             &::-webkit-datetime-edit {
