@@ -26,12 +26,12 @@ function Signin() {
           <form>
             <div className="form-input">
               <label>Email Address</label>
-              <input type="text" placeholder="Enter your email address"></input>
+              <input type="email" placeholder="daphneSmith@gmail.com" required></input>
             </div>
             <div className="form-input last">
               <label>Password</label>
               <div className="input-rl-main">
-                <input type="number" placeholder="**************"></input>
+                <input type="password" placeholder="**************" required></input>
                 <div className="Eyeicon">
                   <img src={Eyeicon} alt="Eyeicon" />
                 </div>

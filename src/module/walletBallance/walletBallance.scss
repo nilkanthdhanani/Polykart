@@ -1,23 +1,11 @@
-body {
-    margin: 0;
-    padding: 0;
-    font-family: "Poppins", sans-serif;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p {
-    margin: 0;
-    padding: 0;
-}
-
 .wallet-box {
     font-family: "Mulish", sans-serif;
     padding: 25px 20px;
+    min-height: calc(100vh - 103px - 50px);
+
+    @media (max-width: 576px) {
+        min-height: calc(100vh - 85px - 50px);
+    }
 
     .dashboard {
         display: flex;

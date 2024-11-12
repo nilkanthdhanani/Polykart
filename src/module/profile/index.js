@@ -2,6 +2,7 @@ import React from 'react';
 import './profile.scss';
 import editIcon from '../../assets/icons/editIcon.svg';
 import Cross from '../../assets/icons/cross.js';
+import calendar from "../../assets/icons/calendar.svg";
 
 export default function Profile() {
     return (
@@ -41,8 +42,11 @@ export default function Profile() {
                             <input type="number" placeholder='+1 (119) 297-9543' />
                             <label>Company Name</label>
                             <input type="text" placeholder='Biffco Enterprises Ltd.' />
-                            <label>Birth Of Date</label>
-                            <input type="date" />
+                            <div className="modal-box-input-date1">
+                                <label>Birth Of Date</label>
+                                <input type="date" />
+                                <img src={calendar} alt="calendar" />
+                            </div>
                         </div>
                         <div className="profile-input-box">
                             <div className="edit-box"></div>

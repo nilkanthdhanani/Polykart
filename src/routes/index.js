@@ -1,6 +1,7 @@
 import { createBrowserRouter } from "react-router-dom";
 import Home from "../module/home";
 import DefaultLayout from "./defaultLayout";
+import AuthLayout from "./authLayout";
 import Signin from "../components/signin";
 import Signup from "../components/signup";
 import Resetpassword from "../components/resetpassword";
@@ -13,6 +14,7 @@ import BuyerSeller from "../module/buyerSeller";
 import Transaction from "../module/transaction";
 import Notification from "../module/notification";
 import WalletBallance from "../module/walletBallance";
+import Dashboard from "../module/dashboard";
 
 const router = createBrowserRouter([
   {
@@ -20,28 +22,12 @@ const router = createBrowserRouter([
     element: <DefaultLayout />,
     children: [
       {
-        path: "/signin",
-        element: <Signin />,
-      },
-      {
-        path: "/signup",
-        element: <Signup />,
-      },
-      {
-        path: "/otpverify",
-        element: <Otpverify />,
-      },
-      {
-        path: "/resetpassword",
-        element: <Resetpassword />,
-      },
-      {
-        path: "/setnewpassword",
-        element: <Setnewpassword />,
-      },
-      {
         path: "/",
         element: <Home />,
+      },
+      {
+        path: "/dashboard",
+        element: <Dashboard />,
       },
       {
         path: "/walletBallance",
@@ -70,6 +56,32 @@ const router = createBrowserRouter([
       {
         path: "/notification",
         element: <Notification />,
+      },
+    ],
+  },
+  {
+    path: "/",
+    element: <AuthLayout />,
+    children: [
+      {
+        path: "/signin",
+        element: <Signin />,
+      },
+      {
+        path: "/signup",
+        element: <Signup />,
+      },
+      {
+        path: "/otpverify",
+        element: <Otpverify />,
+      },
+      {
+        path: "/resetpassword",
+        element: <Resetpassword />,
+      },
+      {
+        path: "/setnewpassword",
+        element: <Setnewpassword />,
       },
     ],
   },

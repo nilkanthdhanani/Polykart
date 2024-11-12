@@ -26,7 +26,7 @@ function Setnewpassword() {
             <div className="form-input">
               <label>New Password</label>
               <div className="input-rl-main">
-                <input type="number" placeholder="**************"></input>
+                <input type="password" placeholder="**************"></input>
                 <div className="Eyeicon">
                   <img src={Eyeicon} alt="Eyeicon" />
                 </div>
@@ -35,7 +35,7 @@ function Setnewpassword() {
             <div className="form-input last">
               <label>Confirm Password</label>
               <div className="input-rl-main">
-                <input type="number" placeholder="**************"></input>
+                <input type="password" placeholder="**************"></input>
                 <div className="Eyeicon">
                   <img src={Eyeicon} alt="Eyeicon" />
                 </div>

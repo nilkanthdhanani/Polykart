@@ -26,18 +26,18 @@ function Signup() {
           <form>
             <div className="form-input">
               <label>Full Name</label>
-              <input type="text" placeholder="Enter your full name"></input>
+              <input type="text" placeholder="Daphne Smith"></input>
             </div>
             <div className="form-input">
               <label>Email Address</label>
               <div className="input-rl-main">
-                <input type="number" placeholder="Enter your email address"></input>
+                <input type="email" placeholder="daphneSmith@gmail.com"></input>
               </div>
             </div>
             <div className="form-input last">
               <label>Password</label>
               <div className="input-rl-main">
-                <input type="number" placeholder="**************"></input>
+                <input type="password" placeholder="**************"></input>
                 <div className="Eyeicon">
                   <img src={Eyeicon} alt="Eyeicon" />
                 </div>
@@ -49,7 +49,7 @@ function Signup() {
               <span>
                 I have read and agree to the website{" "}
                 <NavLink to={"/"}>
-                  Privacy Policy and <br /> Terms & Conditions.
+                  Privacy Policy and Terms & Conditions.
                 </NavLink>
               </span>
             </div>

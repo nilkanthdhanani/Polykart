@@ -1,28 +1,11 @@
-body {
-    margin: 0;
-    padding: 0;
-    font-family: "Poppins", sans-serif;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p {
-    margin: 0;
-    padding: 0;
-}
-
 .profile-box {
-    min-height: calc(100vh - 102px - 40px);
+    min-height: calc(100vh - 103px - 40px);
     padding: 20px;
     overflow: auto;
     background-color: #f5f6fa;
 
     @media (max-width: 576px) {
-        min-height: calc(100vh - 84px);
+        min-height: calc(100vh - 85px);
         padding: 0;
     }
 
@@ -266,18 +249,43 @@ p {
                     }
                 }
 
-                input[type="date"]::-webkit-inner-spin-button,
-                input[type="date"]::-webkit-calendar-picker-indicator {
-                    display: none;
-                    -webkit-appearance: none;
-                }
-
                 input[type="date"] {
                     font-family: "Poppins", sans-serif;
                 }
 
                 ::placeholder {
                     color: #a1a1aa;
+                }
+
+                .modal-box-input-date1 {
+                    width: 100%;
+                    position: relative;
+
+                    input {
+                        cursor: pointer;
+
+                        @media (max-width: 576px) {
+                            padding: 17px 10px;
+                            width: calc(100% - 20px);
+                        }
+
+                        &::-webkit-datetime-edit {
+                            color: #a1a1aa;
+                        }
+                    }
+
+                    img {
+                        pointer-events: none;
+                        background-color: #fff;
+                        top: 55px;
+                        right: 15px;
+                        position: absolute;
+
+                        @media (max-width: 576px) {
+                            top: 45px;
+                            right: 10px;
+                        }
+                    }
                 }
             }
 

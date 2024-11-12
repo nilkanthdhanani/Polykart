@@ -32,7 +32,7 @@ function Header({ toggleSidebar }) {
           </div>
         </NavLink>
         <div className="username-logo-main">
-          <NavLink to={"/profile"}>
+          <NavLink to={"/signin"}>
             <div className="username-logo">
               <span>RF</span>
             </div>

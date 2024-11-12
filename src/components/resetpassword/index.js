@@ -25,7 +25,7 @@ function Resetpassword() {
           <form>
             <div>
               <label>Email Address</label>
-              <input type="text" placeholder="Enter your email address"></input>
+              <input type="text" placeholder="daphneSmith@gmail.com"></input>
             </div>
             <div className="continue-button-div-main">
               <NavLink to={"/otpverify"}>
