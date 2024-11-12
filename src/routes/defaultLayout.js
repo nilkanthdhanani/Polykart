@@ -16,11 +16,9 @@ export default function DefaultLayout() {
         <Sidebar isOpen={isSidebarOpen} toggleSidebar={toggleSidebar} />
         <div className="main-layout-content">
           <Header toggleSidebar={toggleSidebar} />
-          <div className="main-layout">
-            <Outlet />
-          </div>
+          <Outlet />
         </div>
       </div>
-    </div>
+    </div >
   );
 }

@@ -16,6 +16,11 @@ p {
 }
 
 .sidebar {
+    position: sticky;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    
     @media (max-width: 1024px) {
         position: absolute;
         width: 100%;

@@ -16,17 +16,12 @@ p {
 }
 
 .home-grid {
-    min-height: calc(100vh - 102px);
     display: grid;
     grid-template-columns: 412px 1fr;
     font-family: "Mulish", sans-serif;
 
     @media (max-width: 768px) {
         display: block;
-    }
-
-    @media (max-width: 576px) {
-        min-height: calc(100vh - 84px);
     }
 
     .home-box {
