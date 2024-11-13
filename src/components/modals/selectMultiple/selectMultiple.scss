@@ -1,0 +1,145 @@
+.select-modal {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: 9999;
+    background: #00000099;
+    backdrop-filter: blur(6px);
+    font-family: "Poppins", sans-serif;
+
+    .select-modal-box-main {
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 50px 20px;
+
+        ::-webkit-scrollbar {
+            width: 0px;
+            height: 0px;
+        }
+
+        .select-modal-box-content {
+            max-height: 100%;
+            min-width: 980px;
+            overflow: auto;
+            background-color: #fff;
+            border-radius: 12px;
+
+            @media (max-width: 1024px) {
+                min-width: auto;
+            }
+        }
+
+        .select-modal-box {
+            padding: 20px;
+
+            .select-modal-box-title {
+                display: flex;
+                justify-content: end;
+                padding-bottom: 20px;
+
+                @media (max-width: 576px) {
+                    padding-bottom: 15px;
+                }
+
+                img {
+                    cursor: pointer;
+                    transition: all 0.3s ease-in-out;
+
+                    &:hover {
+                        transition: all 0.3s ease-in-out;
+                        transform: rotate(180deg);
+                    }
+
+                    @media (max-width: 576px) {
+                        width: 20px;
+                    }
+                }
+            }
+
+            .select-grid {
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                gap: 20px;
+
+                @media (max-width: 1024px) {
+                    grid-template-columns: repeat(2, 1fr);
+                }
+
+                @media (max-width: 576px) {
+                    grid-template-columns: repeat(1, 1fr);
+                }
+            }
+
+            .select-box-footer {
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+                padding-top: 30px;
+                gap: 8px;
+
+                @media (max-width: 576px) {
+                    flex-direction: column;
+                    align-items: normal;
+                    padding-top: 15px;
+                    gap: 12px;
+                }
+
+                .select-apply-button {
+                    button {
+                        min-width: 110px;
+                        padding: 10px;
+                        border: 1px solid #505abb;
+                        background-color: #505abb;
+                        color: #fff;
+                        border-radius: 4px;
+                        font-family: "Mulish", sans-serif;
+                        font-size: 14px;
+                        font-weight: 500;
+                        line-height: 18px;
+                        cursor: pointer;
+                        transition: 0.3s ease-in-out;
+
+                        @media (max-width: 576px) {
+                            width: 100%;
+                        }
+
+                        &:hover {
+                            background-color: transparent;
+                            color: #4184f3;
+                        }
+                    }
+                }
+
+                .select-reset-button {
+                    button {
+                        min-width: 110px;
+                        padding: 10px;
+                        border: 1px solid #f65722;
+                        background-color: transparent;
+                        color: #f65722;
+                        border-radius: 4px;
+                        font-family: "Mulish", sans-serif;
+                        font-size: 14px;
+                        font-weight: 500;
+                        line-height: 18px;
+                        cursor: pointer;
+                        transition: 0.3s ease-in-out;
+
+                        @media (max-width: 576px) {
+                            width: 100%;
+                        }
+
+                        &:hover {
+                            background-color: #f65722;
+                            color: #fff;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

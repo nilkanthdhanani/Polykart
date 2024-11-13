@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef, useCallback } from "react";
 import "./dashboard.scss";
 import Add from "../../assets/icons/add";
 import Transaction from "../../assets/icons/transaction";
@@ -8,10 +8,18 @@ import setting from "../../assets/icons/setting.svg";
 import trash from "../../assets/icons/Trash.svg";
 import Searchicon from "../../assets/icons/searchicon.svg";
 import { NavLink } from "react-router-dom";
+import SelectMultiple from "../../components/modals/selectMultiple";
+import SelectProduct from "../../components/modals/selectDrop/selectProduct";
+import OtherIco from "../../assets/icons/otherIco";
+import OtherCatogary from "../../components/modals/otherCatogary";
 
 export default function Dashboard() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [modalType, setModalType] = useState(null);
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const [isSelectMultipleOpen, setIsSelectMultipleOpen] = useState(false);
+  const [isOtherCatogaryOpen, setIsOtherCatogaryOpen] = useState(false);
+  const dropdownRef = useRef(null);
 
   const openModal = (type) => {
     setModalType(type);
@@ -22,6 +30,51 @@ export default function Dashboard() {
     setIsModalOpen(false);
     setModalType(null);
   };
+
+  const handleToggleDropdown = () => {
+    setIsDropdownOpen((prev) => !prev);
+  };
+
+  const handleApplyClick = () => {
+    setIsDropdownOpen(false);
+  };
+
+  const handleClickOutside = useCallback((event) => {
+    if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+      setIsDropdownOpen(false);
+    }
+  }, []);
+
+  const openSelectMultipleModal = () => {
+    setIsSelectMultipleOpen(true);
+  };
+
+  const closeSelectMultipleModal = () => {
+    setIsSelectMultipleOpen(false);
+  };
+
+  const openOtherCatogaryModal = () => {
+    setIsOtherCatogaryOpen(true);
+  };
+
+  const closeOtherCatogaryModal = () => {
+    setIsOtherCatogaryOpen(false);
+  };
+
+  useEffect(() => {
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [handleClickOutside]);
+
+  useEffect(() => {
+    if (isModalOpen || isSelectMultipleOpen || isOtherCatogaryOpen) {
+      document.body.classList.add("scroll-off");
+    } else {
+      document.body.classList.remove("scroll-off");
+    }
+  }, [isModalOpen, isSelectMultipleOpen, isOtherCatogaryOpen]);
 
   const listItems = [
     { title: "BCPL WH03N" },
@@ -55,9 +108,24 @@ export default function Dashboard() {
               <NavLink>HDPE</NavLink>
             </div>
             <div className="box1-list-menu">
-              <button>Others</button>
+              <div className="other-category" ref={dropdownRef}>
+                <div className="other-category-button">
+                  <button onClick={handleToggleDropdown}>Others</button>
+                </div>
+                <div className="other-category-modal" onClick={openOtherCatogaryModal}>
+                  <OtherIco />
+                </div>
+                {isDropdownOpen && (
+                  <div className="other-category-drop">
+                    <SelectProduct />
+                    <button onClick={handleApplyClick}>Apply</button>
+                  </div>
+                )}
+              </div>
               <div className="box1-list-menu-line"></div>
-              <img src={setting} alt="setting" />
+              <div className="fillter-div" onClick={openSelectMultipleModal}>
+                <img src={setting} alt="setting" />
+              </div>
             </div>
           </div>
           {listItems.map((item, index) => (
@@ -122,7 +190,10 @@ export default function Dashboard() {
             </div>
           </div>
         </div>
-        {isModalOpen && (modalType === "add" ? <AddWallet closeModal={closeModal} /> : null)}
+
+        {isOtherCatogaryOpen && <OtherCatogary closeModal={closeOtherCatogaryModal} />}
+        {isModalOpen && modalType === "add" && <AddWallet closeModal={closeModal} />}
+        {isSelectMultipleOpen && <SelectMultiple closeModal={closeSelectMultipleModal} />}
       </div>
     </>
   );

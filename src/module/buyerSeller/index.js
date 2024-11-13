@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import './buyerSeller.scss';
 import Cross from '../../assets/icons/cross.js';
 import setting from "../../assets/icons/setting.svg";
@@ -7,10 +7,12 @@ import Buyer from "../../components/modals/buyer";
 import Seller from "../../components/modals/seller";
 import Searchicon from "../../assets/icons/searchicon.svg";
 import { NavLink } from "react-router-dom";
+import SelectMultiple from "../../components/modals/selectMultiple/index.js";
 
 export default function BuyerSeller() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [modalType, setModalType] = useState(null);
+  const [isSelectMultipleOpen, setIsSelectMultipleOpen] = useState(false);
 
   const openModal = (type) => {
     setModalType(type);
@@ -21,6 +23,26 @@ export default function BuyerSeller() {
     setIsModalOpen(false);
     setModalType(null);
   };
+
+  const openSelectMultipleModal = () => {
+    setIsSelectMultipleOpen(true);
+  };
+
+  const closeSelectMultipleModal = () => {
+    setIsSelectMultipleOpen(false);
+  };
+
+  useEffect(() => {
+    if (isModalOpen || isSelectMultipleOpen) {
+      document.body.classList.add("scroll-off");
+    } else {
+      document.body.classList.remove("scroll-off");
+    }
+
+    return () => {
+      document.body.classList.remove("scroll-off");
+    };
+  }, [isModalOpen, isSelectMultipleOpen]);
 
   const listItems = [
     { title: "BCPL WH03N", subtitle: "(RAFFIA)" },
@@ -51,9 +73,9 @@ export default function BuyerSeller() {
               <NavLink>HDPE</NavLink>
             </div>
             <div className="box1-list-menu">
-              <button>Others</button>
-              <div className="box1-list-menu-line"></div>
-              <img src={setting} alt="setting" />
+              <div className="fillter-div" onClick={openSelectMultipleModal}>
+                <img src={setting} alt="setting" />
+              </div>
             </div>
           </div>
           {listItems.map((item, index) => (
@@ -221,6 +243,7 @@ export default function BuyerSeller() {
       </div>
 
       {isModalOpen && (modalType === "buyer" ? <Buyer closeModal={closeModal} /> : modalType === "seller" ? <Seller closeModal={closeModal} /> : null)}
+      {isSelectMultipleOpen && <SelectMultiple closeModal={closeSelectMultipleModal} />}
     </>
   );
 }

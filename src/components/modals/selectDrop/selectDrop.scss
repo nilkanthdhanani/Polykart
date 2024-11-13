@@ -1,0 +1,116 @@
+.select-drop {
+    font-family: "Roboto", sans-serif;
+
+    .select-box {
+        padding: 14px 40px 14px 16px;
+        background-color: #fff;
+        border: 1px solid #54577a2e;
+        border-radius: 8px;
+        cursor: pointer;
+        position: relative;
+
+        span {
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 20px;
+            letter-spacing: 0.01em;
+            color: #737373;
+        }
+
+        .icon {
+            position: absolute;
+            top: 11px;
+            right: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transform: rotate(180deg);
+            transition: transform 0.3s ease;
+
+            &.rotated {
+                transform: rotate(0deg);
+            }
+        }
+    }
+
+    .select-drop-box {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-in-out;
+
+        &.open {
+            max-height: 100vh;
+        }
+
+        .select-drop-inner {
+            margin-top: 8px;
+            background-color: #fff;
+            border: 1px solid #505abb;
+            border-radius: 8px;
+            padding: 20px 0;
+
+            @media (max-width: 576px) {
+                padding-top: 8px;
+            }
+
+            .select-drop-input {
+                margin-bottom: 24px;
+                padding: 0 8px;
+                display: none;
+
+                @media (max-width: 576px) {
+                    display: block;
+                }
+
+                input {
+                    width: 100%;
+                    padding: 14px 18px;
+                    border: none;
+                    border-bottom: 1px solid #dddddd;
+                    border-radius: 8px;
+                    font-family: "Roboto", sans-serif;
+                    font-size: 14px;
+                    font-weight: 400;
+                    line-height: 20px;
+                    letter-spacing: 0.01em;
+                    color: #484848;
+
+                    &:focus {
+                        outline: none;
+                    }
+                }
+            }
+
+            .select-drop-list {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                gap: 20px;
+                margin-bottom: 24px;
+                padding: 0 20px;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+
+                label {
+                    display: block;
+                    font-size: 16px;
+                    font-weight: 400;
+                    line-height: 20px;
+                    letter-spacing: 0.01em;
+                    color: #484848;
+                    word-break: break-word;
+                }
+
+                input {
+                    height: 22px;
+                    width: 22px;
+                    margin: 0;
+                    accent-color: #505abb;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}

@@ -55,32 +55,13 @@
                 align-items: center;
                 gap: 12px;
 
-                button {
-                    padding: 5px 9px;
-                    background-color: transparent;
-                    border: 1px solid #505abb;
-                    border-radius: 4px;
-                    font-family: "Mulish", sans-serif;
-                    font-size: 14px;
-                    font-weight: 600;
-                    line-height: 17.57px;
-                    color: #505abb;
-                    cursor: pointer;
+                .fillter-div {
+                    display: flex;
+                    align-items: center;
 
-                    &:hover {
-                        background-color: #505abb;
-                        color: #fff;
-                        transition: 0.3s ease-in-out;
+                    img {
+                        cursor: pointer;
                     }
-                }
-
-                .box1-list-menu-line {
-                    padding: 15px 0.5px;
-                    background-color: #ededed;
-                }
-
-                img {
-                    cursor: pointer;
                 }
             }
         }
@@ -125,7 +106,7 @@
                         @media (max-width: 576px) {
                             padding: 6px 11px;
                             font-size: 14px;
-                            line-height: 17.57px;
+                            line-height: 18px;
                         }
                     }
                 }
@@ -210,7 +191,7 @@
 
                 a {
                     text-decoration: none;
-                    
+
                     .dashboard-box {
                         padding: 7px 10px 7px 0;
                         border: 1px solid #505abb;
@@ -222,7 +203,7 @@
                         span {
                             font-size: 14px;
                             font-weight: 500;
-                            line-height: 17.57px;
+                            line-height: 18px;
                             color: #505abb;
                         }
                     }

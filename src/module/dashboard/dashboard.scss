@@ -29,7 +29,7 @@
                 font-family: "Mulish", sans-serif;
                 font-size: 14px;
                 font-weight: 400;
-                line-height: 17.57px;
+                line-height: 18px;
                 letter-spacing: -0.01em;
                 text-align: left;
                 color: #54577a;
@@ -38,7 +38,7 @@
                     font-family: "Mulish", sans-serif;
                     font-size: 14px;
                     font-weight: 400;
-                    line-height: 17.57px;
+                    line-height: 18px;
                     letter-spacing: -0.01em;
                     text-align: left;
                     color: #54577a;
@@ -98,7 +98,7 @@
                     @media (max-width: 576px) {
                         padding: 11px;
                         font-size: 14px;
-                        line-height: 17.57px;
+                        line-height: 18px;
                     }
 
                     &:hover {
@@ -114,23 +114,81 @@
                 align-items: center;
                 gap: 12px;
 
-                button {
-                    padding: 5px 9px;
-                    background-color: transparent;
-                    border: 1px solid #505abb;
-                    border-radius: 4px;
-                    font-family: "Mulish", sans-serif;
-                    font-size: 14px;
-                    font-weight: 600;
-                    line-height: 17.57px;
-                    color: #505abb;
-                    cursor: pointer;
-                    transition: 0.3s ease-in-out;
+                .other-category {
+                    position: relative;
 
-                    &:hover {
-                        background-color: #505abb;
-                        color: #fff;
-                        transition: 0.3s ease-in-out;
+                    .other-category-button {
+                        button {
+                            padding: 5px 9px;
+                            background-color: transparent;
+                            border: 1px solid #505abb;
+                            border-radius: 4px;
+                            font-family: "Mulish", sans-serif;
+                            font-size: 14px;
+                            font-weight: 600;
+                            line-height: 18px;
+                            color: #505abb;
+                            cursor: pointer;
+                            transition: 0.3s ease-in-out;
+
+                            &:hover {
+                                background-color: #505abb;
+                                color: #fff;
+                                transition: 0.3s ease-in-out;
+                            }
+                        }
+
+                        @media (max-width: 768px) {
+                            display: none;
+                        }
+                    }
+                    
+                    .other-category-modal {
+                        align-items: center;
+                        display: none;
+
+                        svg {
+                            cursor: pointer;
+                        }
+
+                        @media (max-width: 768px) {
+                            display: flex;
+                        }
+                    }
+
+                    .other-category-drop {
+                        position: absolute;
+                        top: 100%;
+                        left: 0;
+                        background-color: #fff;
+                        border-radius: 8px;
+                        padding: 20px;
+                        margin-top: 10px;
+                        width: 260px;
+                        box-shadow: 0px 2px 30px 0px #00000026;
+
+                        button {
+                            margin-top: 12px;
+                            width: 100%;
+                            padding: 12px;
+                            background-color: #505abb;
+                            border: 1px solid #505abb;
+                            border-radius: 4px;
+                            font-family: "Mulish", sans-serif;
+                            font-size: 16px;
+                            font-weight: 600;
+                            line-height: 20px;
+                            color: #fff;
+                            cursor: pointer;
+                            transition: 0.3s ease-in-out;
+
+                            &:hover {
+                                background-color: transparent;
+                                color: #fff;
+                                transition: 0.3s ease-in-out;
+                                color: #505abb;
+                            }
+                        }
                     }
                 }
 
@@ -139,8 +197,13 @@
                     background-color: #ededed;
                 }
 
-                img {
-                    cursor: pointer;
+                .fillter-div {
+                    display: flex;
+                    align-items: center;
+
+                    img {
+                        cursor: pointer;
+                    }
                 }
             }
         }
@@ -164,7 +227,7 @@
 
                 @media (max-width: 576px) {
                     font-size: 14px;
-                    line-height: 17.57px;
+                    line-height: 18px;
                 }
             }
 
@@ -194,7 +257,7 @@
                         @media (max-width: 576px) {
                             padding: 6px 11px;
                             font-size: 14px;
-                            line-height: 17.57px;
+                            line-height: 18px;
                         }
                     }
                 }
@@ -252,7 +315,7 @@
                     font-family: "Mulish", sans-serif;
                     font-size: 14px;
                     font-weight: 500;
-                    line-height: 17.57px;
+                    line-height: 18px;
                     background-color: #505abb;
                     border: 1px solid #505abb;
                     border-radius: 4px;
@@ -301,7 +364,7 @@
                     font-family: "Mulish", sans-serif;
                     font-size: 14px;
                     font-weight: 500;
-                    line-height: 17.57px;
+                    line-height: 18px;
                     color: #54577a;
 
                     svg {
@@ -340,7 +403,7 @@
                         font-family: "Mulish", sans-serif;
                         font-size: 14px;
                         font-weight: 500;
-                        line-height: 17.57px;
+                        line-height: 18px;
                         color: #fff;
                         padding-bottom: 37px;
 

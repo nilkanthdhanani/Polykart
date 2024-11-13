@@ -1,0 +1,94 @@
+.other-modal {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: 9999;
+    background: #00000099;
+    backdrop-filter: blur(6px);
+    font-family: "Poppins", sans-serif;
+
+    .other-modal-box-main {
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 50px 20px;
+
+        ::-webkit-scrollbar {
+            width: 0px;
+            height: 0px;
+        }
+
+        .other-modal-box-content {
+            max-height: 100%;
+            min-width: 460px;
+            overflow: auto;
+            background-color: #fff;
+            border-radius: 12px;
+
+            @media (max-width: 1024px) {
+                min-width: auto;
+            }
+        }
+
+        .other-modal-box {
+            padding: 20px;
+            min-width: 260px;
+
+            @media (max-width: 320px) {
+                min-width: auto;
+            }
+
+            .other-modal-box-title {
+                display: flex;
+                justify-content: end;
+                padding-bottom: 20px;
+
+                @media (max-width: 576px) {
+                    padding-bottom: 15px;
+                }
+
+                img {
+                    cursor: pointer;
+                    transition: all 0.3s ease-in-out;
+
+                    &:hover {
+                        transition: all 0.3s ease-in-out;
+                        transform: rotate(180deg);
+                    }
+
+                    @media (max-width: 576px) {
+                        width: 20px;
+                    }
+                }
+            }
+
+            .other-modal-drop {
+                button {
+                    margin-top: 12px;
+                    width: 100%;
+                    padding: 12px;
+                    background-color: #505abb;
+                    border: 1px solid #505abb;
+                    border-radius: 4px;
+                    font-family: "Mulish", sans-serif;
+                    font-size: 16px;
+                    font-weight: 600;
+                    line-height: 20px;
+                    color: #fff;
+                    cursor: pointer;
+                    transition: 0.3s ease-in-out;
+
+                    &:hover {
+                        background-color: transparent;
+                        color: #fff;
+                        transition: 0.3s ease-in-out;
+                        color: #505abb;
+                    }
+                }
+            }
+        }
+    }
+}

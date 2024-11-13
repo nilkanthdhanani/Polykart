@@ -69,12 +69,17 @@
             align-items: center;
             justify-content: space-between;
             gap: 15px;
+        }
+
+        @media (max-width: 390px) {
             flex-wrap: wrap;
+            flex-direction: column-reverse;
+            align-items: start;
         }
 
         .username-logo-main {
-            display: flex;
-            justify-content: start;
+            display: grid;
+            grid-template-columns: 70px 1fr;
             align-items: center;
             gap: 15px;
 
@@ -119,6 +124,7 @@
                         font-size: 14px;
                         font-weight: 500;
                         line-height: 21px;
+                        word-break: break-word;
                     }
                 }
             }
@@ -144,7 +150,7 @@
                 font-family: "Mulish", sans-serif;
                 font-size: 14px;
                 font-weight: 500;
-                line-height: 17.57px;
+                line-height: 18px;
                 color: #505abb;
 
                 @media (max-width: 576px) {
@@ -193,7 +199,7 @@
                     font-family: "Mulish", sans-serif;
                     font-size: 14px;
                     font-weight: 500;
-                    line-height: 17.57px;
+                    line-height: 18px;
                     color: #505abb;
                 }
             }
