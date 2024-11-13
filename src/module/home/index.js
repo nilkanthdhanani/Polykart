@@ -5,28 +5,28 @@ import HomeSell from "../../components/modals/homeBuySell/homeSell";
 import Searchicon from "../../assets/icons/searchicon.svg";
 
 const data1 = [
-  { commodity: "Raffia", date: "Sep 05", qty: 156, price: "₹ 550,05" },
-  { commodity: "Mould Basell", date: "Sep 05", qty: 211, price: "₹ 540,25" },
-  { commodity: "Raffia Opal", date: "Sep 05", qty: 186, price: "₹ 542,63" },
-  { commodity: "Raffia Ril", date: "Sep 05", qty: 174, price: "₹ 533,75" },
-  { commodity: "PP THERMO", date: "Sep 05", qty: 114, price: "₹ 485,44" },
-  { commodity: "Thermo Ril", date: "Sep 05", qty: 142, price: "₹ 100,44" },
-  { commodity: "Thermo Mrpl", date: "Sep 05", qty: 115, price: "₹ 305,44" },
-  { commodity: "PP TQ", date: "Sep 05", qty: 520, price: "₹ 106,44" },
-  { commodity: "Tq Iocl", date: "Sep 05", qty: 320, price: "₹ 620,44" },
-  { commodity: "Tq Bcpl", date: "Sep 05", qty: 121, price: "₹ 530,44" },
+  { commodity: "Raffia", date: "Sep 05", time: "16:11", qty: 156, price: "₹ 550,05" },
+  { commodity: "Mould Basell", date: "Sep 05", time: "16:11", qty: 211, price: "₹ 540,25" },
+  { commodity: "Raffia Opal", date: "Sep 05", time: "16:11", qty: 186, price: "₹ 542,63" },
+  { commodity: "Raffia Ril", date: "Sep 05", time: "16:11", qty: 174, price: "₹ 533,75" },
+  { commodity: "PP THERMO", date: "Sep 05", time: "16:11", qty: 114, price: "₹ 485,44" },
+  { commodity: "Thermo Ril", date: "Sep 05", time: "16:11", qty: 142, price: "₹ 100,44" },
+  { commodity: "Thermo Mrpl", date: "Sep 05", time: "16:11", qty: 115, price: "₹ 305,44" },
+  { commodity: "PP TQ", date: "Sep 05", time: "16:11", qty: 520, price: "₹ 106,44" },
+  { commodity: "Tq Iocl", date: "Sep 05", time: "16:11", qty: 320, price: "₹ 620,44" },
+  { commodity: "Tq Bcpl", date: "Sep 05", time: "16:11", qty: 121, price: "₹ 530,44" },
 ];
 
 const data2 = [
-  { price: "₹ 402,05", qty: 156, commodity: "Raffia", date: "Sep 05" },
-  { price: "₹ 340,25", qty: 211, commodity: "Mould Basell", date: "Sep 05" },
-  { price: "₹ 133,75", qty: 174, commodity: "Raffia Ril", date: "Sep 05" },
-  { price: "₹ 185,44", qty: 114, commodity: "PP THERMO", date: "Sep 05" },
-  { price: "₹ 100,14", qty: 142, commodity: "Thermo Ril", date: "Sep 05" },
-  { price: "₹ 205,44", qty: 115, commodity: "Thermo Mrpl", date: "Sep 05" },
-  { price: "₹ 102,44", qty: 520, commodity: "PP TQ", date: "Sep 05" },
-  { price: "₹ 320,44", qty: 320, commodity: "Tq Iocl", date: "Sep 05" },
-  { price: "₹ 230,44", qty: 121, commodity: "Tq Bcpl", date: "Sep 05" },
+  { price: "₹ 402,05", qty: 156, commodity: "Raffia", date: "Sep 05", time: "16:11" },
+  { price: "₹ 340,25", qty: 211, commodity: "Mould Basell", date: "Sep 05", time: "16:11" },
+  { price: "₹ 133,75", qty: 174, commodity: "Raffia Ril", date: "Sep 05", time: "16:11" },
+  { price: "₹ 185,44", qty: 114, commodity: "PP THERMO", date: "Sep 05", time: "16:11" },
+  { price: "₹ 100,14", qty: 142, commodity: "Thermo Ril", date: "Sep 05", time: "16:11" },
+  { price: "₹ 205,44", qty: 115, commodity: "Thermo Mrpl", date: "Sep 05", time: "16:11" },
+  { price: "₹ 102,44", qty: 520, commodity: "PP TQ", date: "Sep 05", time: "16:11" },
+  { price: "₹ 320,44", qty: 320, commodity: "Tq Iocl", date: "Sep 05", time: "16:11" },
+  { price: "₹ 230,44", qty: 121, commodity: "Tq Bcpl", date: "Sep 05", time: "16:11" },
 ];
 
 export default function Home() {
@@ -80,6 +80,7 @@ export default function Home() {
                     <div className="commodity-name">
                       <h2>{item.commodity}</h2>
                       <span>{item.date}</span>
+                      <span>{item.time}</span>
                     </div>
                   </td>
                   <td>{item.qty}</td>
@@ -108,6 +109,7 @@ export default function Home() {
                     <div className="commodity-name">
                       <h2>{item.commodity}</h2>
                       <span>{item.date}</span>
+                      <span>{item.time}</span>
                     </div>
                   </td>
                 </tr>
@@ -132,6 +134,7 @@ export default function Home() {
                     <div className="commodity-name">
                       <h2>{item.commodity}</h2>
                       <span>{item.date}</span>
+                      <span>{item.time}</span>
                     </div>
                   </td>
                   <td>{item.qty}</td>
