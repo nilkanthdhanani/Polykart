@@ -121,10 +121,10 @@
                     color: #a1a1aa;
 
                     @media (max-width: 576px) {
+                        display: block;
                         font-size: 14px;
                         font-weight: 500;
                         line-height: 21px;
-                        word-break: break-word;
                     }
                 }
             }
