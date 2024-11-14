@@ -205,7 +205,9 @@ export default function Home() {
                       </td>
                       <td>
                         <span className="qty-main">{item.qty}</span>
+                        <div className="qty-ammount-tooltip">Quantity: {item.qty}</div>
                       </td>
+
                       <td>
                         <span className="prz-main">{item.price}</span>
                       </td>
@@ -234,6 +236,7 @@ export default function Home() {
                       </td>
                       <td>
                         <span className="qty-main">{item.qty}</span>
+                        <div className="qty-ammount-tooltip">Quantity: {item.qty}</div>
                       </td>
                       <td>
                         <div className="commodity-name">
@@ -269,8 +272,13 @@ export default function Home() {
                           <span>{item.time}</span>
                         </div>
                       </td>
-                      <td>{item.qty}</td>
-                      <td>{item.price}</td>
+                      <td><
+                        span className="qty-main">{item.qty}</span>
+                        <div className="qty-ammount-tooltip">Quantity: {item.qty}</div>
+                      </td>
+                      <td>
+                        <span className="prz-main">{item.price}</span>
+                      </td>
                     </tr>
                   ))}
                 </tbody>
