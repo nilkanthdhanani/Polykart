@@ -4,6 +4,8 @@ import HomeBuy from "../../components/modals/homeBuySell/homeBuy";
 import HomeSell from "../../components/modals/homeBuySell/homeSell";
 import Searchicon from "../../assets/icons/searchicon.svg";
 
+import Nodatacomponent from "../../components/Nodatacomponent";
+
 const data1 = [
   {
     commodity: "Raffia",
@@ -170,116 +172,121 @@ export default function Home() {
   };
 
   return (
-    <div className="home-page">
-      <div className="search-input-main">
-        <input placeholder="Search eg; (BCPL, HMEL, HPL etc)" />
-        <div className="searchicon-main">
-          <img src={Searchicon} alt="Searchicon" />
-        </div>
-      </div>
-      <div className="home-grid">
-        <div className="home-table1">
-          <table>
-            <thead>
-              <tr>
-                <th>Commodity</th>
-                <th>
-                  Qty.<span>(In tons)</span>
-                </th>
-                <th>Price</th>
-              </tr>
-            </thead>
-            <tbody>
-              {data1.map((item, index) => (
-                <tr key={index} onClick={() => openModal("buy")}>
-                  <td>
-                    <div className="commodity-name">
-                      <h2>{item.commodity}</h2>
-                      <span>{item.date}</span>
-                      <span>{item.time}</span>
-                    </div>
-                  </td>
-                  <td>
-                    <span className="qty-main">{item.qty}</span>
-                  </td>
-                  <td>
-                    <span className="prz-main">{item.price}</span>
-                  </td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
+    <>
+      <>
+        <div className="home-page">
+          <div className="search-input-main">
+            <input placeholder="Search eg; (BCPL, HMEL, HPL etc)" />
+            <div className="searchicon-main">
+              <img src={Searchicon} alt="Searchicon" />
+            </div>
+          </div>
+          <div className="home-grid">
+            <div className="home-table1">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Commodity</th>
+                    <th>
+                      Qty.<span>(In tons)</span>
+                    </th>
+                    <th>Price</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {data1.map((item, index) => (
+                    <tr key={index} onClick={() => openModal("buy")}>
+                      <td>
+                        <div className="commodity-name">
+                          <h2>{item.commodity}</h2>
+                          <span>{item.date}</span>
+                          <span>{item.time}</span>
+                        </div>
+                      </td>
+                      <td>
+                        <span className="qty-main">{item.qty}</span>
+                      </td>
+                      <td>
+                        <span className="prz-main">{item.price}</span>
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
 
-        <div className="home-table2">
-          <table>
-            <thead>
-              <tr>
-                <th>Price</th>
-                <th>
-                  Qty.<span>(In tons)</span>
-                </th>
-                <th>Commodity</th>
-              </tr>
-            </thead>
-            <tbody>
-              {data2.map((item, index) => (
-                <tr key={index} onClick={() => openModal("sell")}>
-                  <td>
-                    <span className="prz-main">{item.price}</span>
-                  </td>
-                  <td>
-                    <span className="qty-main">{item.qty}</span>
-                  </td>
-                  <td>
-                    <div className="commodity-name">
-                      <h2>{item.commodity}</h2>
-                      <span>{item.date}</span>
-                      <span>{item.time}</span>
-                    </div>
-                  </td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
+            <div className="home-table2">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Price</th>
+                    <th>
+                      Qty.<span>(In tons)</span>
+                    </th>
+                    <th>Commodity</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {data2.map((item, index) => (
+                    <tr key={index} onClick={() => openModal("sell")}>
+                      <td>
+                        <span className="prz-main">{item.price}</span>
+                      </td>
+                      <td>
+                        <span className="qty-main">{item.qty}</span>
+                      </td>
+                      <td>
+                        <div className="commodity-name">
+                          <h2>{item.commodity}</h2>
+                          <span>{item.date}</span>
+                          <span>{item.time}</span>
+                        </div>
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
 
-        <div className="home-table2 respo">
-          <table>
-            <thead>
-              <tr>
-                <th>Commodity</th>
-                <th>
-                  Qty.<span>(In tons)</span>
-                </th>
-                <th>Price</th>
-              </tr>
-            </thead>
-            <tbody>
-              {data2.map((item, index) => (
-                <tr key={index} onClick={() => openModal("sell")}>
-                  <td>
-                    <div className="commodity-name">
-                      <h2>{item.commodity}</h2>
-                      <span>{item.date}</span>
-                      <span>{item.time}</span>
-                    </div>
-                  </td>
-                  <td>{item.qty}</td>
-                  <td>{item.price}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
+            <div className="home-table2 respo">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Commodity</th>
+                    <th>
+                      Qty.<span>(In tons)</span>
+                    </th>
+                    <th>Price</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {data2.map((item, index) => (
+                    <tr key={index} onClick={() => openModal("sell")}>
+                      <td>
+                        <div className="commodity-name">
+                          <h2>{item.commodity}</h2>
+                          <span>{item.date}</span>
+                          <span>{item.time}</span>
+                        </div>
+                      </td>
+                      <td>{item.qty}</td>
+                      <td>{item.price}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
 
-        {isModalOpen && modalType === "buy" && (
-          <HomeBuy closeModal={closeModal} />
-        )}
-        {isModalOpen && modalType === "sell" && (
-          <HomeSell closeModal={closeModal} />
-        )}
-      </div>
-    </div>
+            {isModalOpen && modalType === "buy" && (
+              <HomeBuy closeModal={closeModal} />
+            )}
+            {isModalOpen && modalType === "sell" && (
+              <HomeSell closeModal={closeModal} />
+            )}
+          </div>
+        </div>
+      </>
+      <Nodatacomponent />
+    </>
   );
 }

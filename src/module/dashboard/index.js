@@ -12,6 +12,7 @@ import SelectMultiple from "../../components/modals/selectMultiple";
 import SelectProduct from "../../components/modals/selectDrop/selectProduct";
 import OtherIco from "../../assets/icons/otherIco";
 import OtherCatogary from "../../components/modals/otherCatogary";
+import Closeiconticket from "../../assets/icons/closeicon";
 
 export default function Dashboard() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -92,6 +93,29 @@ export default function Dashboard() {
 
   return (
     <>
+      <div className="kyc-tickets-main">
+        <div className="kyc-ticket-approved">
+          <div></div>
+          <p>Your KYC Application has been provisionally approved.</p>
+          <div className="close-icon">
+            <Closeiconticket />
+          </div>
+        </div>
+        <div className="kyc-ticket-pending">
+          <div></div>
+          <p>Your KYC Application has been provisionally pending.</p>
+          <div className="close-icon">
+            <Closeiconticket />
+          </div>
+        </div>
+        <div className="kyc-ticket-rejected">
+          <div></div>
+          <p>Your KYC Application has been cancelled.</p>
+          <div className="close-icon">
+            <Closeiconticket />
+          </div>
+        </div>
+      </div>
       <div className="dashboard-grid">
         <div className="dashboard-box">
           <div className="search-input-main">

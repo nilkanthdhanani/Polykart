@@ -142,7 +142,7 @@
                             display: none;
                         }
                     }
-                    
+
                     .other-category-modal {
                         align-items: center;
                         display: none;
@@ -285,7 +285,8 @@
             display: none;
         }
 
-        font-family: "Mulish", sans-serif;
+        font-family: "Mulish",
+        sans-serif;
         padding: 25px 20px;
 
         .dashboard {
@@ -429,6 +430,50 @@
                     background-color: #12b76a;
                 }
             }
+        }
+    }
+}
+
+
+.kyc-tickets-main {
+    .kyc-ticket-approved {
+        background-color: #12B76A;
+        display: none !important;
+    }
+
+    .kyc-ticket-pending {
+        background-color: #FFBB00;
+        display: none !important;
+    }
+
+    .kyc-ticket-rejected {
+        background-color: #F05252;
+        display: none !important;
+    }
+
+    .kyc-ticket-approved,
+    .kyc-ticket-pending,
+    .kyc-ticket-rejected {
+        padding: 5px 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        p {
+            font-family: Mulish;
+            font-size: 14px;
+            font-weight: 600;
+            line-height: 17.57px;
+            letter-spacing: 0.01em;
+            text-align: left;
+            text-underline-position: from-font;
+            text-decoration-skip-ink: none;
+            color: #fff;
+        }
+
+        .close-icon {
+            cursor: pointer;
+            color: #fff;
         }
     }
 }

@@ -129,6 +129,19 @@
                                         display: none;
                                     }
                                 }
+
+                                .qty-main {
+                                    overflow: hidden;
+                                    white-space: nowrap;
+                                    text-overflow: ellipsis;
+                                    display: inline-block;
+                                    max-width: 90px;
+
+                                    /* For mobile and tablet screens */
+                                    @media (max-width: 768px) {
+                                        max-width: 50px;
+                                    }
+                                }
                             }
                         }
                     }

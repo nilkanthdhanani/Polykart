@@ -45,7 +45,11 @@ export default function HomeSell({ closeModal }) {
                         <td>{data.number}</td>
                         <td>{data.grade}</td>
                         <td>{data.price}</td>
-                        <td>{data.qty}</td>
+                        <td>
+                          <span className="qty-main">
+                            {data.qty}
+                          </span>
+                        </td>
                       </tr>
                     ))}
                   </tbody>
@@ -55,6 +59,6 @@ export default function HomeSell({ closeModal }) {
           </div>
         </div>
       </div>
-    </div>
+    </div >
   );
 }
