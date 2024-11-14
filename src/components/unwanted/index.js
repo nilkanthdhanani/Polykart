@@ -3,78 +3,76 @@ import "./home.scss";
 import HomeBuy from "../../components/modals/homeBuySell/homeBuy";
 import HomeSell from "../../components/modals/homeBuySell/homeSell";
 import Searchicon from "../../assets/icons/searchicon.svg";
-import "react-tooltip/dist/react-tooltip.css";
-import { Tooltip } from "react-tooltip";
 
 const data1 = [
   {
     commodity: "Raffia",
     date: "Sep 05",
     time: "16:11",
-    qty: "156",
+    qty: 156,
     price: "₹ 550,05",
   },
   {
     commodity: "Mould Basell",
     date: "Sep 05",
     time: "16:11",
-    qty: "211",
+    qty: 211,
     price: "₹ 540,25",
   },
   {
     commodity: "Raffia Opal",
     date: "Sep 05",
     time: "16:11",
-    qty: "186",
+    qty: 186,
     price: "₹ 542,63",
   },
   {
     commodity: "Raffia Ril",
     date: "Sep 05",
     time: "16:11",
-    qty: "174",
+    qty: 174,
     price: "₹ 533,75",
   },
   {
     commodity: "PP THERMO",
     date: "Sep 05",
     time: "16:11",
-    qty: "114",
+    qty: 114,
     price: "₹ 485,44",
   },
   {
     commodity: "Thermo Ril",
     date: "Sep 05",
     time: "16:11",
-    qty: "142",
+    qty: 142,
     price: "₹ 100,44",
   },
   {
     commodity: "Thermo Mrpl",
     date: "Sep 05",
     time: "16:11",
-    qty: "115",
+    qty: 115,
     price: "₹ 305,44",
   },
   {
     commodity: "PP TQ",
     date: "Sep 05",
     time: "16:11",
-    qty: "520",
+    qty: 520,
     price: "₹ 106,44",
   },
   {
     commodity: "Tq Iocl",
     date: "Sep 05",
     time: "16:11",
-    qty: "320",
+    qty: 320,
     price: "₹ 620,44",
   },
   {
     commodity: "Tq Bcpl",
     date: "Sep 05",
     time: "16:11",
-    qty: "121",
+    qty: 121,
     price: "₹ 530,44",
   },
 ];
@@ -82,63 +80,63 @@ const data1 = [
 const data2 = [
   {
     price: "₹ 402,05",
-    qty: "156",
+    qty: 156,
     commodity: "Raffia",
     date: "Sep 05",
     time: "16:11",
   },
   {
     price: "₹ 340,25",
-    qty: "211",
+    qty: 211,
     commodity: "Mould Basell",
     date: "Sep 05",
     time: "16:11",
   },
   {
     price: "₹ 133,75",
-    qty: "174",
+    qty: 174,
     commodity: "Raffia Ril",
     date: "Sep 05",
     time: "16:11",
   },
   {
     price: "₹ 185,44",
-    qty: "114",
+    qty: 114,
     commodity: "PP THERMO",
     date: "Sep 05",
     time: "16:11",
   },
   {
     price: "₹ 100,14",
-    qty: "142",
+    qty: 142,
     commodity: "Thermo Ril",
     date: "Sep 05",
     time: "16:11",
   },
   {
     price: "₹ 205,44",
-    qty: "115",
+    qty: 115,
     commodity: "Thermo Mrpl",
     date: "Sep 05",
     time: "16:11",
   },
   {
     price: "₹ 102,44",
-    qty: "520",
+    qty: 520,
     commodity: "PP TQ",
     date: "Sep 05",
     time: "16:11",
   },
   {
     price: "₹ 320,44",
-    qty: "320",
+    qty: 320,
     commodity: "Tq Iocl",
     date: "Sep 05",
     time: "16:11",
   },
   {
     price: "₹ 230,44",
-    qty: "121",
+    qty: 121,
     commodity: "Tq Bcpl",
     date: "Sep 05",
     time: "16:11",
@@ -148,18 +146,8 @@ const data2 = [
 export default function Home() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [modalType, setModalType] = useState("");
-  const [truncateLength, setTruncateLength] = useState(getTruncateLength());
-
-  function getTruncateLength() {
-    return window.innerWidth > 768 ? 10 : 5;
-  }
 
   useEffect(() => {
-    const handleResize = () => {
-      setTruncateLength(getTruncateLength());
-    };
-    window.addEventListener("resize", handleResize);
-
     if (isModalOpen) {
       document.body.classList.add("scroll-off");
     } else {
@@ -167,7 +155,6 @@ export default function Home() {
     }
 
     return () => {
-      window.removeEventListener("resize", handleResize);
       document.body.classList.remove("scroll-off");
     };
   }, [isModalOpen]);
@@ -180,13 +167,6 @@ export default function Home() {
   const closeModal = () => {
     setIsModalOpen(false);
     setModalType("");
-  };
-
-  const formatQty = (qty) => {
-    const qtyStr = qty.toString();
-    return qtyStr.length > truncateLength
-      ? `${qtyStr.slice(0, truncateLength)}...`
-      : qtyStr;
   };
 
   return (
@@ -220,23 +200,10 @@ export default function Home() {
                     </div>
                   </td>
                   <td>
-                    <span
-                      className="qty-main"
-                      // title={item.qty}
-                      data-tooltip-id="my-tooltip"
-                      data-tooltip-content={item.qty}
-                    >
-                      {formatQty(item.qty)}
-                    </span>
+                    <span className="qty-main">{item.qty}</span>
                   </td>
                   <td>
-                    <span
-                      className="prz-main"
-                      data-tooltip-id="my-tooltip"
-                      data-tooltip-content={item.price}
-                    >
-                      {item.price}
-                    </span>
+                    <span className="prz-main">{item.price}</span>
                   </td>
                 </tr>
               ))}
@@ -259,23 +226,10 @@ export default function Home() {
               {data2.map((item, index) => (
                 <tr key={index} onClick={() => openModal("sell")}>
                   <td>
-                    <span
-                      className="prz-main"
-                      data-tooltip-id="my-tooltip"
-                      data-tooltip-content={item.price}
-                    >
-                      {item.price}
-                    </span>
+                    <span className="prz-main">{item.price}</span>
                   </td>
                   <td>
-                    <span
-                      className="qty-main"
-                      // title={item.qty}
-                      data-tooltip-id="my-tooltip"
-                      data-tooltip-content={item.qty}
-                    >
-                      {formatQty(item.qty)}
-                    </span>
+                    <span className="qty-main">{item.qty}</span>
                   </td>
                   <td>
                     <div className="commodity-name">
@@ -311,25 +265,8 @@ export default function Home() {
                       <span>{item.time}</span>
                     </div>
                   </td>
-                  <td>
-                    <span
-                      className="qty-main"
-                      // title={item.qty}
-                      data-tooltip-id="my-tooltip"
-                      data-tooltip-content={item.qty}
-                    >
-                      {formatQty(item.qty)}
-                    </span>
-                  </td>
-                  <td>
-                    <span
-                      className="prz-main"
-                      data-tooltip-id="my-tooltip"
-                      data-tooltip-content={item.price}
-                    >
-                      {item.price}
-                    </span>
-                  </td>
+                  <td>{item.qty}</td>
+                  <td>{item.price}</td>
                 </tr>
               ))}
             </tbody>
@@ -343,7 +280,6 @@ export default function Home() {
           <HomeSell closeModal={closeModal} />
         )}
       </div>
-      <Tooltip id="my-tooltip" />
     </div>
   );
 }

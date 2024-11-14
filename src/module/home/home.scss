@@ -181,6 +181,40 @@
                                 line-height: 15px;
                             }
 
+                            // .qty-main {
+                            //     overflow: hidden;
+                            //     display: -webkit-box;
+                            //     -webkit-line-clamp: 1;
+                            //     -webkit-box-orient: vertical;
+                            //     margin: 0 auto;
+
+                            //     @media (max-width:576px) {
+                            //         max-width: 40px;
+                            //     }
+                            // }
+
+                            // .qty-main {
+                            //     max-width: 50px;
+                            //     overflow: hidden;
+                            //     white-space: nowrap;
+                            //     text-overflow: ellipsis;
+                            //     display: inline-block;
+                            // }
+
+                            .qty-main {
+                                overflow: hidden;
+                                white-space: nowrap;
+                                text-overflow: ellipsis;
+                                display: inline-block;
+                                max-width: 150px;
+
+                                /* For mobile and tablet screens */
+                                @media (max-width: 768px) {
+                                    max-width: 50px;
+                                }
+                            }
+
+
                             .commodity-name {
                                 padding-left: 8px;
                                 position: relative;
