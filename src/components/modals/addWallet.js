@@ -14,7 +14,7 @@ export default function AddWallet({ closeModal }) {
           <div className="modal-box" onClick={handleModalContentClick}>
             <div className="modal-box-title">
               <h2>Add Wallet</h2>
-              <img src={cross} alt="cross" onClick={closeModal} />
+              <img src={cross} alt="Close" onClick={closeModal} />
             </div>
             <div className="modal-box-input">
               <div className="modal-box-input-amount">

@@ -1,18 +1,13 @@
 import React, { useEffect, useState } from "react";
 import './buyerSeller.scss';
 import Cross from '../../assets/icons/cross.js';
-import setting from "../../assets/icons/setting.svg";
-import trash from "../../assets/icons/Trash.svg";
 import Buyer from "../../components/modals/buyer";
 import Seller from "../../components/modals/seller";
-import Searchicon from "../../assets/icons/searchicon.svg";
-import { NavLink } from "react-router-dom";
-import SelectMultiple from "../../components/modals/selectMultiple/index.js";
+import DashboardMain from "../../components/dashboardMain/index.js";
 
 export default function BuyerSeller() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [modalType, setModalType] = useState(null);
-  const [isSelectMultipleOpen, setIsSelectMultipleOpen] = useState(false);
 
   const openModal = (type) => {
     setModalType(type);
@@ -24,16 +19,8 @@ export default function BuyerSeller() {
     setModalType(null);
   };
 
-  const openSelectMultipleModal = () => {
-    setIsSelectMultipleOpen(true);
-  };
-
-  const closeSelectMultipleModal = () => {
-    setIsSelectMultipleOpen(false);
-  };
-
   useEffect(() => {
-    if (isModalOpen || isSelectMultipleOpen) {
+    if (isModalOpen) {
       document.body.classList.add("scroll-off");
     } else {
       document.body.classList.remove("scroll-off");
@@ -42,59 +29,12 @@ export default function BuyerSeller() {
     return () => {
       document.body.classList.remove("scroll-off");
     };
-  }, [isModalOpen, isSelectMultipleOpen]);
-
-  const listItems = [
-    { title: "BCPL WH03N", subtitle: "(RAFFIA)" },
-    { title: "HEML R03RR", subtitle: "(BOPP)" },
-    { title: "HPL R103", subtitle: "(THERMOFORMING)" },
-    { title: "IOCL 1030RG", subtitle: "(TQPP)" },
-    { title: "MPRL HR003", subtitle: "(RAFFIA)" },
-    { title: "RIL H030SG SS35H", subtitle: "(BOPP)" },
-    { title: "BCPL WH040N", subtitle: "(TQPP)" },
-    { title: "IOCL P1045RG", subtitle: "(RAFFIA)" },
-  ];
+  }, [isModalOpen]);
 
   return (
     <>
       <div className="buysell-grid">
-        <div className="home-box">
-          <div className="search-input-main">
-            <input placeholder="Search eg; (BCPL, HMEL, HPL etc)" />
-            <div className="searchicon-main">
-              <img src={Searchicon} alt="Searchicon" />
-            </div>
-          </div>
-          <div className="box1-list">
-            <div className="box1-list-link">
-              <NavLink>PP</NavLink>
-              <NavLink>LLDPE</NavLink>
-              <NavLink>LD</NavLink>
-              <NavLink>HDPE</NavLink>
-            </div>
-            <div className="box1-list-menu">
-              <div className="fillter-div" onClick={openSelectMultipleModal}>
-                <img src={setting} alt="setting" />
-              </div>
-            </div>
-          </div>
-          {listItems.map((item, index) => (
-            <div className="box1-list-main" key={index}>
-              <h3>{item.title}
-                <span>{item.subtitle}</span>
-              </h3>
-              <div className="box1-list-main-bin">
-                <button>
-                  B
-                </button>
-                <button>
-                  S
-                </button>
-                <img src={trash} alt="trash" />
-              </div>
-            </div>
-          ))}
-        </div>
+        <DashboardMain />
 
         <div className="buysell-box">
           <div className="status-box-title">
@@ -243,7 +183,6 @@ export default function BuyerSeller() {
       </div>
 
       {isModalOpen && (modalType === "buyer" ? <Buyer closeModal={closeModal} /> : modalType === "seller" ? <Seller closeModal={closeModal} /> : null)}
-      {isSelectMultipleOpen && <SelectMultiple closeModal={closeSelectMultipleModal} />}
     </>
   );
 }
