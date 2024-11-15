@@ -10,18 +10,20 @@ export default function AddWallet({ closeModal }) {
   return (
     <div className="modal" onClick={closeModal}>
       <div className="modal-box-main">
-        <div className="modal-box" onClick={handleModalContentClick}>
-          <div className="modal-box-title">
-            <h2>Add Wallet</h2>
-            <img src={cross} alt="cross" onClick={closeModal} />
-          </div>
-          <div className="modal-box-input">
-            <div className="modal-box-input-amount">
-              <label>Transaction Amount</label>
-              <input type="number" placeholder="15200" />
-              <div className="ruppe-div">₹</div>
+        <div className="modal-box-content">
+          <div className="modal-box" onClick={handleModalContentClick}>
+            <div className="modal-box-title">
+              <h2>Add Wallet</h2>
+              <img src={cross} alt="cross" onClick={closeModal} />
             </div>
-            <button>Add</button>
+            <div className="modal-box-input">
+              <div className="modal-box-input-amount">
+                <label>Transaction Amount</label>
+                <input type="number" placeholder="15200" />
+                <div className="ruppe-div">₹</div>
+              </div>
+              <button>Add</button>
+            </div>
           </div>
         </div>
       </div>
