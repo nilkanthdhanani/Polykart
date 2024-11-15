@@ -1,7 +1,7 @@
 .home-page {
     .search-input-main {
         display: none;
-        padding: 20px 20px 10px 20px;
+        padding: 20px;
         position: relative;
 
         @media (max-width: 1024px) {
@@ -39,7 +39,7 @@
 
         .searchicon-main {
             position: absolute;
-            top: 55%;
+            top: 50%;
             right: 34px;
             transform: translateY(-50%);
             width: 20px;
@@ -108,7 +108,7 @@
 
         .home-table1,
         .home-table2 {
-            // overflow: auto;
+            overflow: auto;
 
             table {
                 width: 100%;

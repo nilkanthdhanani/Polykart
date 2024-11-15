@@ -125,6 +125,11 @@
                         font-size: 14px;
                         font-weight: 500;
                         line-height: 21px;
+                        overflow: hidden;
+                        white-space: nowrap;
+                        text-overflow: ellipsis;
+                        display: inline-block;
+                        max-width: 160px;
                     }
                 }
             }
