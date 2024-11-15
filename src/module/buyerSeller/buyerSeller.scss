@@ -12,6 +12,12 @@
         min-height: calc(100vh - 85px);
     }
 
+    .dashboard-box {
+        @media (max-width: 1024px) {
+            display: none;
+        }
+    }
+
     .buysell-box {
         background-color: #f5f6fa;
         padding: 20px;

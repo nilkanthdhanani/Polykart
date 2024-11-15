@@ -126,7 +126,7 @@
                         }
                     }
 
-                    @media (max-width: 768px) {
+                    @media (max-width: 1024px) {
                         display: none;
                     }
                 }
@@ -139,7 +139,7 @@
                         cursor: pointer;
                     }
 
-                    @media (max-width: 768px) {
+                    @media (max-width: 1024px) {
                         display: flex;
                     }
                 }
@@ -231,7 +231,7 @@
                 font-weight: 500;
                 line-height: 18px;
                 color: #54577AB2;
-                max-width: 160px;
+                max-width: 200px;
                 white-space: nowrap;
                 overflow: hidden;
                 text-overflow: ellipsis;
