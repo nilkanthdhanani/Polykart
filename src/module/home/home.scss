@@ -233,7 +233,9 @@
                                 box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
                                 visibility: hidden;
                                 opacity: 0;
-                                transition: opacity 0.3s ease, visibility 0.3s ease;
+                                transition:
+                                    opacity 0.3s ease,
+                                    visibility 0.3s ease;
                                 z-index: 10;
 
                                 &::before {
@@ -249,7 +251,6 @@
                                     border-top: 6px solid #fff;
                                 }
                             }
-
 
                             .commodity-name {
                                 padding-left: 8px;
@@ -274,33 +275,41 @@
                                     @media (max-width: 768px) {
                                         font-size: 12px;
                                         line-height: 15px;
-                                        white-space: nowrap;
                                         overflow: hidden;
+                                        white-space: nowrap;
                                         text-overflow: ellipsis;
+                                        max-width: 72px;
                                     }
                                 }
 
-                                span {
-                                    font-size: 14px;
-                                    font-weight: 400;
-                                    line-height: 18px;
-                                    letter-spacing: -0.01em;
-                                    color: #54577a;
+                                .commodity-date {
+                                    display: flex;
+                                    align-items: center;
 
-                                    @media (max-width: 768px) {
-                                        font-size: 10px;
-                                        line-height: 13px;
-                                        white-space: nowrap;
-                                        overflow: hidden;
-                                        text-overflow: ellipsis;
-                                    }
-
-                                    &:last-child {
-                                        display: none;
+                                    span {
+                                        display: block;
+                                        font-size: 14px;
+                                        font-weight: 400;
+                                        line-height: 18px;
+                                        letter-spacing: -0.01em;
+                                        color: #54577a;
 
                                         @media (max-width: 768px) {
-                                            display: inline-block;
-                                            margin-left: 3px;
+                                            font-size: 10px;
+                                            line-height: 13px;
+                                            white-space: nowrap;
+                                            overflow: hidden;
+                                            text-overflow: ellipsis;
+                                            max-width: 35px;
+                                        }
+
+                                        &:last-child {
+                                            display: none;
+
+                                            @media (max-width: 768px) {
+                                                display: inline-block;
+                                                margin-left: 3px;
+                                            }
                                         }
                                     }
                                 }

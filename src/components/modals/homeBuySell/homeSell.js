@@ -42,14 +42,10 @@ export default function HomeSell({ closeModal }) {
                   <tbody>
                     {buyData.map((data, index) => (
                       <tr key={index}>
-                        <td>{data.number}</td>
-                        <td>{data.grade}</td>
-                        <td>{data.price}</td>
-                        <td>
-                          <span className="qty-main">
-                            {data.qty}
-                          </span>
-                        </td>
+                        <td><span className="qty-main">{data.number}</span></td>
+                        <td><span className="grade-main">{data.grade}</span></td>
+                        <td><span className="price-main">{data.price}</span></td>
+                        <td><span className="qty-main">{data.qty}</span></td>
                       </tr>
                     ))}
                   </tbody>

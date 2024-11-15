@@ -199,8 +199,10 @@ export default function Home() {
                       <td>
                         <div className="commodity-name">
                           <h2>{item.commodity}</h2>
-                          <span>{item.date}</span>
-                          <span>{item.time}</span>
+                          <div className="commodity-date">
+                            <span>{item.date}</span>
+                            <span>{item.time}</span>
+                          </div>
                         </div>
                       </td>
                       <td>
@@ -241,8 +243,10 @@ export default function Home() {
                       <td>
                         <div className="commodity-name">
                           <h2>{item.commodity}</h2>
-                          <span>{item.date}</span>
-                          <span>{item.time}</span>
+                          <div className="commodity-date">
+                            <span>{item.date}</span>
+                            <span>{item.time}</span>
+                          </div>
                         </div>
                       </td>
                     </tr>
@@ -268,12 +272,14 @@ export default function Home() {
                       <td>
                         <div className="commodity-name">
                           <h2>{item.commodity}</h2>
-                          <span>{item.date}</span>
-                          <span>{item.time}</span>
+                          <div className="commodity-date">
+                            <span>{item.date}</span>
+                            <span>{item.time}</span>
+                          </div>
                         </div>
                       </td>
-                      <td><
-                        span className="qty-main">{item.qty}</span>
+                      <td>
+                        <span className="qty-main">{item.qty}</span>
                         <div className="qty-ammount-tooltip">Quantity: {item.qty}</div>
                       </td>
                       <td>

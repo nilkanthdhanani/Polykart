@@ -1,13 +1,16 @@
 import React from "react";
+import { useLocation, NavLink } from "react-router-dom";
 import "./header.scss";
 
 import Searchicon from "../../assets/icons/searchicon.svg";
 import Notification from "../../assets/icons/Notification.svg";
+import themeIco from "../../assets/icons/themeIco.svg";
 import menuIcon from "../../assets/icons/menuIcon.svg";
 import headerLogo from "../../assets/image/headerLogo.png";
-import { NavLink } from "react-router-dom";
 
 function Header({ toggleSidebar }) {
+  const location = useLocation();
+
   return (
     <header>
       <div className="search-input-main">
@@ -23,6 +26,13 @@ function Header({ toggleSidebar }) {
         </NavLink>
       </div>
       <div className="user-details-header">
+        {(location.pathname === "/buyerseller" || location.pathname === "/transaction") && (
+          <div className="theme-div-main">
+            <div className="theme-icon-main">
+              <img src={themeIco} alt="themeIco" />
+            </div>
+          </div>
+        )}
         <NavLink to={"/notification"}>
           <div className="notification-div-main">
             <div className="notification-icon-main">

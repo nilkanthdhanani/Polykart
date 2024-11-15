@@ -195,8 +195,10 @@ export default function Home() {
                   <td>
                     <div className="commodity-name">
                       <h2>{item.commodity}</h2>
-                      <span>{item.date}</span>
-                      <span>{item.time}</span>
+                      <div className="commodity-date">
+                        <span>{item.date}</span>
+                        <span>{item.time}</span>
+                      </div>
                     </div>
                   </td>
                   <td>
@@ -234,8 +236,10 @@ export default function Home() {
                   <td>
                     <div className="commodity-name">
                       <h2>{item.commodity}</h2>
-                      <span>{item.date}</span>
-                      <span>{item.time}</span>
+                      <div className="commodity-date">
+                        <span>{item.date}</span>
+                        <span>{item.time}</span>
+                      </div>
                     </div>
                   </td>
                 </tr>
@@ -261,8 +265,10 @@ export default function Home() {
                   <td>
                     <div className="commodity-name">
                       <h2>{item.commodity}</h2>
-                      <span>{item.date}</span>
-                      <span>{item.time}</span>
+                      <div className="commodity-date">
+                        <span>{item.date}</span>
+                        <span>{item.time}</span>
+                      </div>
                     </div>
                   </td>
                   <td>{item.qty}</td>

@@ -1,9 +1,23 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './selectDrop.scss';
 import CartUpIco from '../../../assets/icons/cartUpIco';
 
 export default function SelectGrade() {
     const [isOpen, setIsOpen] = useState(true);
+
+    useEffect(() => {
+        const handleResize = () => {
+            if (window.innerWidth < 1024) {
+                setIsOpen(false);
+            }
+        };
+
+        handleResize();
+
+        window.addEventListener('resize', handleResize);
+
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
 
     const toggleDropdown = () => {
         setIsOpen(!isOpen);

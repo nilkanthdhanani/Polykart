@@ -46,7 +46,7 @@ const router = createBrowserRouter([
         element: <Profile />,
       },
       {
-        path: "/buyerSeller",
+        path: "/buyerseller",
         element: <BuyerSeller />,
       },
       {

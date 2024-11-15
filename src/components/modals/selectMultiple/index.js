@@ -27,7 +27,7 @@ export default function SelectMultiple({ closeModal }) {
                 <SelectGrade />
               </div>
               <div className="select-box-footer">
-                <div className="select-apply-button">
+                <div className="select-apply-button" onClick={closeModal}>
                   <button type="button">Apply</button>
                 </div>
                 <div className="select-reset-button">

@@ -130,17 +130,23 @@
                                     }
                                 }
 
-                                .qty-main {
+                                .qty-main, .grade-main, .price-main {
                                     overflow: hidden;
                                     white-space: nowrap;
                                     text-overflow: ellipsis;
                                     display: inline-block;
-                                    max-width: 90px;
+                                }
 
-                                    /* For mobile and tablet screens */
-                                    @media (max-width: 768px) {
-                                        max-width: 50px;
-                                    }
+                                .qty-main {
+                                    max-width: 50px;
+                                }
+
+                                .grade-main {
+                                    max-width: 70px;
+                                }
+
+                                .price-main {
+                                    max-width: 60px;
                                 }
                             }
                         }

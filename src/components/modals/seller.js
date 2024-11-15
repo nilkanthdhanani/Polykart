@@ -11,8 +11,8 @@ export default function Seller({ closeModal }) {
     <div>
       <div className="modal" onClick={closeModal}>
         <div className="modal-box-main">
-          <div className="modal-box" onClick={handleModalContentClick}>
-            <div className="modal-box-content">
+          <div className="modal-box-content">
+            <div className="modal-box" onClick={handleModalContentClick}>
               <div className="modal-box-title">
                 <h2>
                   BCPL WH03N<span>(PP, Raffia)</span>
