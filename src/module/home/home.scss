@@ -19,7 +19,6 @@
             font-weight: 400;
             line-height: 18px;
             letter-spacing: -0.01em;
-            text-align: left;
             color: #54577a;
 
             &::placeholder {
@@ -28,7 +27,7 @@
                 font-weight: 400;
                 line-height: 18px;
                 letter-spacing: -0.01em;
-                text-align: left;
+
                 color: #54577a;
             }
 
@@ -154,11 +153,11 @@
                             }
 
                             &:first-child {
-                                text-align: left;
+                
                             }
 
                             &:last-child {
-                                text-align: left;
+                
                                 padding: 8px 70px;
 
                                 @media (max-width: 768px) {
@@ -320,7 +319,7 @@
                             }
 
                             &:last-child {
-                                text-align: left;
+                
                                 padding: 17px 70px 12px 70px;
 
                                 @media (max-width: 768px) {
