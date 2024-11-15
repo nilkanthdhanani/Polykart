@@ -28,7 +28,7 @@
             background-color: #fff;
             border-radius: 12px;
 
-            @media (max-width: 576px) {
+            @media (max-width: 768px) {
                 min-width: auto;
             }
 
@@ -39,8 +39,6 @@
 
                 @media (max-width: 767px) {
                     padding: 20px;
-                    margin: 0 20px;
-                    width: 100%;
                 }
 
                 .modal-box-title {
