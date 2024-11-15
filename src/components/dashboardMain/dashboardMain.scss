@@ -221,6 +221,7 @@
                 @media (max-width: 576px) {
                     font-size: 14px;
                     line-height: 18px;
+                    max-width: 120px;
                 }
             }
 
@@ -230,11 +231,15 @@
                 font-size: 14px;
                 font-weight: 500;
                 line-height: 18px;
-                color: #54577AB2;
+                color: #54577ab2;
                 max-width: 200px;
                 white-space: nowrap;
                 overflow: hidden;
                 text-overflow: ellipsis;
+
+                @media (max-width: 576px) {
+                    max-width: 110px;
+                }
             }
         }
 
