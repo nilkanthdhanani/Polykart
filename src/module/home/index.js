@@ -186,11 +186,11 @@ export default function Home() {
               <table>
                 <thead>
                   <tr>
-                    <th>Commodity</th>
+                    <th><h2>Commodity</h2></th>
                     <th>
-                      Qty.<span>(In tons)</span>
+                      <h2>Qty.<span>(In tons)</span></h2>
                     </th>
-                    <th>Price</th>
+                    <th><h2>Price</h2></th>
                   </tr>
                 </thead>
                 <tbody>
@@ -223,11 +223,11 @@ export default function Home() {
               <table>
                 <thead>
                   <tr>
-                    <th>Price</th>
+                    <th><h2>Commodity</h2></th>
                     <th>
-                      Qty.<span>(In tons)</span>
+                      <h2>Qty.<span>(In tons)</span></h2>
                     </th>
-                    <th>Commodity</th>
+                    <th><h2>Price</h2></th>
                   </tr>
                 </thead>
                 <tbody>
@@ -259,11 +259,11 @@ export default function Home() {
               <table>
                 <thead>
                   <tr>
-                    <th>Commodity</th>
+                    <th><h2>Commodity</h2></th>
                     <th>
-                      Qty.<span>(In tons)</span>
+                      <h2>Qty.<span>(In tons)</span></h2>
                     </th>
-                    <th>Price</th>
+                    <th><h2>Price</h2></th>
                   </tr>
                 </thead>
                 <tbody>

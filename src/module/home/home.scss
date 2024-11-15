@@ -122,16 +122,35 @@
                             width: 33.33%;
                             white-space: nowrap;
                             padding: 8px 20px;
-                            font-size: 16px;
-                            font-weight: 600;
-                            line-height: 20px;
-                            color: #fff;
 
                             @media (max-width: 768px) {
                                 padding: 8px 4px;
-                                font-size: 12px;
-                                font-weight: 700;
-                                line-height: 15px;
+                            }
+
+                            h2 {
+                                font-size: 16px;
+                                font-weight: 600;
+                                line-height: 20px;
+                                color: #fff;
+
+                                @media (max-width: 768px) {
+                                    font-size: 12px;
+                                    font-weight: 700;
+                                    line-height: 15px;
+                                }
+
+                                @media (max-width: 768px) {
+                                    max-width: 68px;
+                                    overflow: hidden;
+                                    white-space: nowrap;
+                                    text-overflow: ellipsis;
+                                }
+
+                                span {
+                                    @media (max-width: 768px) {
+                                        display: none;
+                                    }
+                                }
                             }
 
                             &:first-child {
@@ -144,12 +163,6 @@
 
                                 @media (max-width: 768px) {
                                     padding: 8px 4px;
-                                }
-                            }
-
-                            span {
-                                @media (max-width: 768px) {
-                                    display: none;
                                 }
                             }
                         }
@@ -182,26 +195,6 @@
                                 line-height: 15px;
                             }
 
-                            // .qty-main {
-                            //     overflow: hidden;
-                            //     display: -webkit-box;
-                            //     -webkit-line-clamp: 1;
-                            //     -webkit-box-orient: vertical;
-                            //     margin: 0 auto;
-
-                            //     @media (max-width:576px) {
-                            //         max-width: 40px;
-                            //     }
-                            // }
-
-                            // .qty-main {
-                            //     max-width: 50px;
-                            //     overflow: hidden;
-                            //     white-space: nowrap;
-                            //     text-overflow: ellipsis;
-                            //     display: inline-block;
-                            // }
-
                             .qty-main {
                                 overflow: hidden;
                                 white-space: nowrap;
@@ -209,7 +202,6 @@
                                 display: inline-block;
                                 max-width: 90px;
 
-                                /* For mobile and tablet screens */
                                 @media (max-width: 768px) {
                                     max-width: 50px;
                                 }
