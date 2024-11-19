@@ -46,8 +46,8 @@ export default function BuyerSeller() {
               <div className="buysell-box-head">
                 <h2>BCPL WH03N</h2>
                 <div className="buysell-button">
-                  <button onClick={() => openModal("buyer")}>B</button>
-                  <button onClick={() => openModal("seller")}>S</button>
+                  <button onClick={() => openModal("buyer")}>Buy</button>
+                  <button onClick={() => openModal("seller")}>Sell</button>
                 </div>
               </div>
               <div className="buysell-grade">

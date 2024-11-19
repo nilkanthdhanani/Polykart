@@ -43,7 +43,7 @@ export default function Profile() {
                             <label>Company Name</label>
                             <input type="text" placeholder='Biffco Enterprises Ltd.' />
                             <div className="modal-box-input-date1">
-                                <label>Birth Of Date</label>
+                                <label>Date of Birth</label>
                                 <input type="date" />
                                 <img src={calendar} alt="calendar" />
                             </div>
@@ -52,9 +52,9 @@ export default function Profile() {
                             <div className="edit-box"></div>
                             <label>Email Address</label>
                             <input type="email" placeholder='robert78@gmail.com' />
-                            <label>Address</label>
-                            <input type="text" placeholder='G-1, Swarg Avenue, Panchmukhi Nr Jubliee Baug' />
-                            <label>Company Address</label>
+                            {/* <label>Address</label>
+                            <input type="text" placeholder='G-1, Swarg Avenue, Panchmukhi Nr Jubliee Baug' /> */}
+                            <label>Billing Address</label>
                             <input type="text" placeholder='Akshya Nagar 1st Block 1st Cross, Rammurthy , Bangalore' />
                             <label>Pan card No.</label>
                             <input type="text" placeholder='KPL1552WC' />

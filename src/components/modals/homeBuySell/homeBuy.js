@@ -27,6 +27,10 @@ export default function HomeBuy({ closeModal }) {
           <div className="home-modal-box-content">
             <div className="home-modal-box" onClick={handleModalContentClick}>
               <div className="home-modal-box-title">
+                <div>
+                  <h2>Raffia</h2>
+                  <span>Sep 05 16:11</span>
+                </div>
                 <img src={cross} alt="cross" onClick={closeModal} />
               </div>
               <div className="home-modal-table">

@@ -75,7 +75,6 @@
             a {
                 display: block;
                 padding: 14px;
-                text-decoration-line: none;
                 border-bottom: 2px solid transparent;
                 font-family: "Mulish", sans-serif;
                 font-size: 16px;
@@ -246,31 +245,27 @@
         .box1-list-main-bin {
             display: flex;
 
-            a {
+            button {
+                padding: 6px 14px;
+                border: none;
+                font-family: "Mulish", sans-serif;
+                border-radius: 6px;
+                font-size: 16px;
+                font-weight: 600;
+                line-height: 20px;
+                color: #fff;
+                background-color: #4184f3;
+                cursor: pointer;
+
                 &:last-of-type {
-                    button {
-                        margin: 0 8px;
-                        background-color: #f65722;
-                    }
+                    margin: 0 8px;
+                    background-color: #f65722;
                 }
 
-                button {
-                    padding: 6px 14px;
-                    border: none;
-                    font-family: "Mulish", sans-serif;
-                    border-radius: 6px;
-                    font-size: 16px;
-                    font-weight: 600;
-                    line-height: 20px;
-                    color: #fff;
-                    background-color: #4184f3;
-                    cursor: pointer;
-
-                    @media (max-width: 576px) {
-                        padding: 6px 11px;
-                        font-size: 14px;
-                        line-height: 18px;
-                    }
+                @media (max-width: 576px) {
+                    padding: 6px 11px;
+                    font-size: 14px;
+                    line-height: 18px;
                 }
             }
 

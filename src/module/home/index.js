@@ -22,6 +22,7 @@ const data1 = [
 const data2 = [
   { price: "₹ 402,05", qty: 156, commodity: "Raffia", date: "Sep 05", time: "16:11", },
   { price: "₹ 340,25", qty: 211, commodity: "Mould Basell", date: "Sep 05", time: "16:11", },
+  { price: "₹ 0", qty: 0, commodity: "Raffia Opal", date: "Sep 05", time: "16:11", },
   { price: "₹ 133,75", qty: 174, commodity: "Raffia Ril", date: "Sep 05", time: "16:11", },
   { price: "₹ 185,44", qty: 114, commodity: "PP THERMO", date: "Sep 05", time: "16:11", },
   { price: "₹ 100,14", qty: 142, commodity: "Thermo Ril", date: "Sep 05", time: "16:11", },
@@ -108,11 +109,11 @@ export default function Home() {
               <table>
                 <thead>
                   <tr>
-                    <th><h2>Commodity</h2></th>
+                    <th><h2>Price</h2></th>
                     <th>
                       <h2>Qty.<span>(In tons)</span></h2>
                     </th>
-                    <th><h2>Price</h2></th>
+                    <th><h2>Commodity</h2></th>
                   </tr>
                 </thead>
                 <tbody>
@@ -133,42 +134,6 @@ export default function Home() {
                             <span>{item.time}</span>
                           </div>
                         </div>
-                      </td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
-
-            <div className="home-table2 respo">
-              <table>
-                <thead>
-                  <tr>
-                    <th><h2>Commodity</h2></th>
-                    <th>
-                      <h2>Qty.<span>(In tons)</span></h2>
-                    </th>
-                    <th><h2>Price</h2></th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {data2.map((item, index) => (
-                    <tr key={index} onClick={() => openModal("sell")}>
-                      <td>
-                        <div className="commodity-name">
-                          <h2>{item.commodity}</h2>
-                          <div className="commodity-date">
-                            <span>{item.date}</span>
-                            <span>{item.time}</span>
-                          </div>
-                        </div>
-                      </td>
-                      <td>
-                        <span className="qty-main">{item.qty}</span>
-                        <div className="qty-ammount-tooltip">Quantity: {item.qty}</div>
-                      </td>
-                      <td>
-                        <span className="prz-main">{item.price}</span>
                       </td>
                     </tr>
                   ))}

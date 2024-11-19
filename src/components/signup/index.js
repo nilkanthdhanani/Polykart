@@ -29,6 +29,10 @@ function Signup() {
               <input type="text" placeholder="Daphne Smith"></input>
             </div>
             <div className="form-input">
+              <label>Phone Number</label>
+              <input type="number" placeholder='+1 (119) 297-9543' />
+            </div>
+            <div className="form-input">
               <label>Email Address</label>
               <div className="input-rl-main">
                 <input type="email" placeholder="daphneSmith@gmail.com"></input>

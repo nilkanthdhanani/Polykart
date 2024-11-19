@@ -22,8 +22,8 @@ export default function Buyer({ closeModal }) {
                 <label>Quantity</label>
                 <input type="number" placeholder="135" />
                 <div className="modal-box-input-amount">
-                  <label>Price</label>
-                  <input type="number" placeholder="15200" />
+                  <label>Price Per Unit</label>
+                  <input type="number" placeholder="521,30" />
                   <div className="ruppe-div">₹</div>
                 </div>
                 <label>Location</label>

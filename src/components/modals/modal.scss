@@ -147,11 +147,17 @@
                         font-weight: 500;
                         line-height: 27px;
                         color: #fff;
-                        border: none;
+                        border: 1px solid #505abb;
                         border-radius: 8px;
                         background-color: #505abb;
                         font-family: "Poppins", sans-serif;
                         cursor: pointer;
+                        transition: all 0.3s ease-in-out;
+
+                        &:hover {
+                            background-color: transparent;
+                            color: #505abb;
+                        }
 
                         @media (max-width: 576px) {
                             margin-top: 10px;

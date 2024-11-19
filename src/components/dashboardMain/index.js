@@ -8,11 +8,15 @@ import OtherIco from "../../assets/icons/otherIco";
 import OtherCatogary from "../../components/modals/otherCatogary";
 import SelectMultiple from "../../components/modals/selectMultiple";
 import { NavLink } from "react-router-dom";
+import Buyer from "../modals/buyer";
+import Seller from "../modals/seller";
 
 export default function DashboardMain() {
     const [isDropdownOpen, setIsDropdownOpen] = useState(false);
     const [isOtherCatogaryOpen, setIsOtherCatogaryOpen] = useState(false);
     const [isSelectMultipleOpen, setIsSelectMultipleOpen] = useState(false);
+    const [isBuyerOpen, setIsBuyerOpen] = useState(false);
+    const [isSellerOpen, setIsSellerOpen] = useState(false);
     const dropdownRef = useRef(null);
 
     const listItems = [
@@ -63,13 +67,29 @@ export default function DashboardMain() {
         setIsSelectMultipleOpen(false);
     };
 
+    const openBuyerModal = () => {
+        setIsBuyerOpen(true);
+    };
+
+    const closeBuyerModal = () => {
+        setIsBuyerOpen(false);
+    };
+
+    const openSellerModal = () => {
+        setIsSellerOpen(true);
+    };
+
+    const closeSellerModal = () => {
+        setIsSellerOpen(false);
+    };
+
     useEffect(() => {
-        if (isSelectMultipleOpen || isOtherCatogaryOpen) {
+        if (isSelectMultipleOpen || isOtherCatogaryOpen || isBuyerOpen || isSellerOpen) {
             document.body.classList.add("scroll-off");
         } else {
             document.body.classList.remove("scroll-off");
         }
-    }, [isSelectMultipleOpen, isOtherCatogaryOpen]);
+    }, [isSelectMultipleOpen, isOtherCatogaryOpen, isBuyerOpen, isSellerOpen]);
 
     return (
         <div className="dashboard-box">
@@ -108,22 +128,36 @@ export default function DashboardMain() {
                 </div>
             </div>
             {listItems.map((item, index) => (
-                <div className="box1-list-main" key={index}>
-                    <div className="box1-list-name">
-                        <h3>{item.title}</h3>
-                        <span>{item.name}</span>
+                <NavLink to={"/buyerseller"} key={index}>
+                    <div className="box1-list-main">
+                        <div className="box1-list-name">
+                            <h3>{item.title}</h3>
+                            <span>{item.name}</span>
+                        </div>
+                        <div className="box1-list-main-bin">
+                            <button
+                                onClick={(e) => {
+                                    e.preventDefault();
+                                    e.stopPropagation();
+                                    openBuyerModal();
+                                }}>
+                                B
+                            </button>
+                            <button
+                                onClick={(e) => {
+                                    e.preventDefault();
+                                    e.stopPropagation();
+                                    openSellerModal();
+                                }}>
+                                S
+                            </button>
+                            <img src={trash} alt="trash" />
+                        </div>
                     </div>
-                    <div className="box1-list-main-bin">
-                        <NavLink to={"/buyerseller"}>
-                            <button>B</button>
-                        </NavLink>
-                        <NavLink to={"/buyerseller"}>
-                            <button>S</button>
-                        </NavLink>
-                        <img src={trash} alt="trash" />
-                    </div>
-                </div>
+                </NavLink>
             ))}
+            {isBuyerOpen && <Buyer closeModal={closeBuyerModal} />}
+            {isSellerOpen && <Seller closeModal={closeSellerModal} />}
             {isOtherCatogaryOpen && <OtherCatogary closeModal={closeOtherCatogaryModal} />}
             {isSelectMultipleOpen && <SelectMultiple closeModal={closeSelectMultipleModal} />}
         </div>

@@ -22,8 +22,11 @@ export default function Seller({ closeModal }) {
               <div className="modal-box-input">
                 <label>Quantity</label>
                 <input type="number" placeholder="144" />
-                <label>Price</label>
-                <input type="text" placeholder="₹ | 535,41" />
+                <div className="modal-box-input-amount">
+                  <label>Price Per Unit</label>
+                  <input type="number" placeholder="535,41" />
+                  <div className="ruppe-div">₹</div>
+                </div>
                 <label>Location</label>
                 <input type="text" placeholder="G-1, Swarg Avenue, Panchmukhi Nr Jubliee Baug" />
                 <div className="modal-box-input-date">

@@ -82,26 +82,10 @@
         .home-table2 {
             border-left: 1px solid #ededed;
 
-            @media (max-width: 1024px) {
-                display: none;
-            }
-
             .commodity-name {
                 &::after {
                     background-color: #f65722;
                 }
-            }
-        }
-
-        .respo {
-            display: none;
-
-            @media (max-width: 1024px) {
-                display: block;
-            }
-
-            @media (max-width: 576px) {
-                border-left: none;
             }
         }
 
@@ -153,11 +137,11 @@
                             }
 
                             &:first-child {
-                
+                                text-align: left;
                             }
 
                             &:last-child {
-                
+                                text-align: left;
                                 padding: 8px 70px;
 
                                 @media (max-width: 768px) {
